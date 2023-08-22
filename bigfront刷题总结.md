@@ -45,6 +45,53 @@ function curry(fn) {
   }
 }
 ```
+<a name="ctNqU"></a>
+# implement curry() with placeholder support
+```javascript
+
+// This is a JavaScript coding problem from BFE.dev 
+
+/**
+ * @param { (...args: any[]) => any } fn
+ * @returns { (...args: any[]) => any }
+ */
+function curry(fn) {
+  // your code here
+  return function curried(...args) {
+    let argsMaxLenth = fn.length
+    let canRun = args.length >= argsMaxLenth && args.slice(0, argsMaxLenth).every(item => item !== curry.placeholder)
+    if(canRun) return fn.apply(this, args)
+    // else return curried.bind(this, ...args)
+    return function(...newArgs) {
+      // _,_,_,1,2
+      // _,3,_
+      // merge
+      let i = 0, j = 0, fullArgs = []
+      while(i < args.length && j < newArgs.length) {
+        if(args[i] === curry.placeholder) {
+          fullArgs.push(newArgs[j])
+          i++
+          j++
+        }else {
+          fullArgs.push(args[i])
+          i++
+        }
+      }
+      while(i < args.length) {
+        fullArgs.push(args[i])
+        i++
+      }
+      while(j < newArgs.length) {
+        fullArgs.push(newArgs[j])
+        j++
+      }
+      return curried(...fullArgs)
+    }
+  }
+}
+
+curry.placeholder = Symbol()
+```
 <a name="BLfPa"></a>
 # implement Array.prototype.flat()
 ```javascript
