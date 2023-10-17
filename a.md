@@ -1,0 +1,5 @@
+Hello, my name is livia, I come from Sichuan, China, and now I live in Suzhou, Jiangsu Province. I like music festivals very much. The last music festival I watched was in Nanjing, Jiangsu Province.
+The festival featured hip-hop artists like C-Block, nineone, who I love.
+For most people, watching music festivals is very tiring, but for me, it doesn't feel tired, even if I need to run back and forth between several music festival stages, just to get closer to my favorite singers and listen better.
+There are many people like me who run to and from multiple stages, so there will be a crowd in front of the stage. I don't like being in the crowd, but when I think of listening to songs far away without being immersed in the feeling, I still choose to be in the crowd.
+When listening to music festivals, I really enjoy singing loudly with my friends along with the singers. In that state, people will feel very happy and free, which is what I love and yearn for, so I like listening to live music festivals very much。
