@@ -190,8 +190,77 @@ for(i = sholdBePatch - 1; i >=0; i--) {
 <a name="O6coc"></a>
 ## 模版解析
 ![](https://cdn.nlark.com/yuque/0/2023/jpeg/29453752/1695541725018-de50f5eb-648d-4fd6-92b7-26ded070f052.jpeg)
-<a name="PCuIz"></a>
-## 
+<a name="RRPhQ"></a>
+### 1.AST的完整流程
+AST的整体过程就是parse阶段将模板解析成ast树，在进行语法分析，把AST节点做一层转换，最后generate阶段将AST转换成可执行的代码
+
+1. 解析模板生成ast，先创建解析上下文，然后通过子节点的类型去解析子节点(在vue3中的节点类型比vue2中多了很多，vue2中，一共三种即：基础元素节点，文本节点，纯文本节点/注释节点。而vue3中有根，元素，文本，注释，表达式，插值，属性，指令节点7种)，在解析子节点的过程中，会对模板从上至下依次解析，并移动前进代码，修改context.source的值，然后把生成的node添加到AST nodes数组中。直到判断context.source为空，即整个模板处理完成。
+2. transform阶段：将模板字符串AST转化成描述js代码AST,  首先创建转换上下文，再通过traverseNode对AST，通过node类型进行递归转化，这里涉及到了一个退出函数的洋葱模型(从根开始，自顶向下遍历，但实际处理是自下向上)。比如转换元素节点，调用createVNodeCall函数返回一个node节点对象，这个函数里面会添加type, patchFlag, isBlock等属性。
+3. generate阶段：生成代码
+<a name="pdWbQ"></a>
+### 2.Vue3的AST中做了哪些优化
+[https://juejin.cn/post/7017064780263325727#heading-15](https://juejin.cn/post/7017064780263325727#heading-15)
+
+1. 静态节点的提升
+2. 补丁标记和动态属性记录。把动态的东西提前保存，作标记和记录，等下次更新的时候，只更新这些保存起来的动态的记录。
+```vue
+<div>
+  <div :title="title">{{text}}</div>
+</div>
+
+
+import { toDisplayString as _toDisplayString, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
+
+
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock("div", null, [
+    // 标记了有两个动态的，TEXT标识文本动态，PROPS标识属性动态。[title]标识动态的属性为title, 9代表patchFlag。
+    _createVNode("div", { title: _ctx.title }, _toDisplayString(_ctx.text), 9 /* TEXT, PROPS */, ["title"])
+  ]))
+}
+
+```
+
+3. 缓存事件处理程序
+
+比如react中， 会把@click = "onClick"变成 @click = "() => onClick()", 会造成每次点击，都是一个全新的函数，导致一系列更新。
+```vue
+<div @click="onClick">coboy</div>
+
+  	// 优化前	
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
+
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock("div", null, [
+    _createVNode("div", { onClick: _ctx.onClick }, "coboy", 8 /* PROPS */, ["onClick"])
+  ]))
+}
+
+
+
+  // 优化后
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
+
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock("div", null, [
+    _createVNode("div", {
+      onClick: _cache[1] || (_cache[1] = (...args) => (_ctx.onClick(...args)))
+    }, "coboy")
+  ]))
+}
+
+```
+
+4. 块openBlock和currentBlock
+
+openBlock，往当前的blockStack中push一个新的block， 作为currentBlock。 收集动态的vnode节点，这样在patch阶段只对比这些动态的vnode节点，避免不必要的静态节点的比对。
+<a name="C19p8"></a>
+### 3.AST的应用有哪些
+
+1. css预编译器解析
+2. ES6 babel转换
+3. UglifyJs压缩代码
+4. webpack插件的开发
 <a name="VrIhH"></a>
 ## 我们平时开发页面就是把页面拆成一个个组件，那么组件的拆分粒度时越细越好吗？为什么？
 组件的拆分粒度并没有一个固定的标准，这取决于项目的规模，复杂度。
