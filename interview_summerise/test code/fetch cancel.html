@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="download">download</button>
+  <button class="abort">abort</button>
+  <img src="http://iph.href.lu/100x100" alt="">
+  <script>
+    let controller = null
+    
+
+    const url = "video.mp4";
+    const downloadBtn = document.querySelector(".download");
+    const abortBtn = document.querySelector(".abort");
+
+    downloadBtn.addEventListener("click", fetchVideo);
+
+    abortBtn.addEventListener("click", () => {
+      if(controller) {
+        controller.abort();
+        controller = null
+        console.log("Download aborted");
+      }
+    });
+
+
+    function fetchVideo() {
+      try {
+        console.log(controller)
+        if(controller) {
+          controller.abort()
+          controller = null
+        }
+        controller = new AbortController()
+        const signal = controller.signal;
+        console.log('controller: ',controller)
+
+        fetch('https://api.oioweb.cn/api/common/OneDayEnglish', { signal,  mode: 'cors' })
+          .then((response) => {
+            console.log("Download complete", response);
+          })
+          .catch((err) => {
+            console.error(`Download error: ${err.message}`);
+          });
+
+      } catch (ee) {
+        console.log(ee)
+      }
+    }
+
+  </script>
+</body>
+</html>
