@@ -1,7 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = {
+  target: 'web',
   entry: './index.js',
   output: {
     filename: 'bundle.js',
@@ -25,7 +27,7 @@ module.exports = {
               esModule: true,
               modules: {
                 namedExport: true,
-                localIdentName: "foo__[name]__[local]",
+                localIdentName: "[local]",
               },
             },
           },
@@ -37,6 +39,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({ template: "./index.html", scriptLoading: "blocking" }),
     new MiniCssExtractPlugin({
       filename: "[name]_[contenthash:8].css",
     }),
@@ -48,6 +51,14 @@ module.exports = {
     ],
     // 开发环境下
     minimize: true
+  },
+  // webpack5 的形式
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    open: true,
+    port: 9000,
   },
   mode: 'development',
 };

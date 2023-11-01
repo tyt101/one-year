@@ -26,7 +26,7 @@ eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n// 通过 Commo
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   app: () => (/* binding */ app),\n/* harmony export */   ppp: () => (/* binding */ ppp)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\nvar app = \"foo__index__app\";\nvar ppp = \"foo__index__ppp\";\n\n//# sourceURL=webpack://webpack-test/./index.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   app: () => (/* binding */ app),\n/* harmony export */   ppp: () => (/* binding */ ppp)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\nvar app = \"app\";\nvar ppp = \"ppp\";\n\n//# sourceURL=webpack://webpack-test/./index.css?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************/
 /***/ ((module) => {
 
-eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello,' + content;\r\n}\r\n\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = show;\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\n\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = show;\n\n//# sourceURL=webpack://webpack-test/./show.js?");
 
 /***/ })
 
