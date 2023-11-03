@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function deepCopy(obj, hash = new WeakMap()) {
+
+      if(typeof obj == 'function' || typeof obj != 'object') return obj
+
+      if (hash.has(obj)) {
+        return hash.get(obj)
+      }
+      let copyObj = Array.isArray(obj) ? [] : {}
+      hash.set(obj, copyObj)
+      for(let key in obj) {
+        if(obj.hasOwnProperty(key)) {
+          copyObj[key] = deepCopy(obj[key], hash)
+        }
+      }
+      return copyObj
+    }
+
+    const obj = {
+      a: 1,
+      b: [1,2,3],
+      c: {
+        cm: 1,
+        cn: 'obj',
+      }
+    }
+
+    obj.aa = obj
+    let copyedObj = deepCopy(obj)
+
+    copyedObj.c.cm = 'fs'
+    console.log(obj, copyedObj)
+  </script>
+</body>
+</html>

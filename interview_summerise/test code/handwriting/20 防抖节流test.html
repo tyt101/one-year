@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="funcD()">防抖</button>
+  <button onclick="funcT()">节流</button>
+  <script src="./20 防抖和节流.js"></script>
+  <script>
+    const funcD = debounce(() => {
+      console.log("防抖")
+    }, 2000)
+    const funcT = throttle(() => {
+      console.log("节流")
+    }, 1000)
+    
+  </script>
+</body>
+</html>
