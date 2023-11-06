@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+  <script>
+    // 类数组: lis
+    const lis = document.getElementsByTagName('li')
+    console.log(lis)
+
+    // 类数组：objLis
+    const objLis = {
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      'length': 3
+    }
+
+    // Array.from
+    console.log(Array.from(objLis))
+    console.log(Array.from(lis))
+
+    // Array.prototype.slice.call()
+    console.log(Array.prototype.slice.call(objLis))
+    console.log(Array.prototype.slice.call(lis))
+
+    // Array.prototype.concat.apply([], arrayLike)
+    console.log(Array.prototype.concat.apply([], {'0': 0,'length': 1}))
+    console.log(Array.prototype.concat.apply([], objLis))
+    console.log(Array.prototype.concat.apply([], lis))
+
+  </script>
+</body>
+</html>

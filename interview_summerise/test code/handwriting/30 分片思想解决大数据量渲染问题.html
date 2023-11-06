@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+    // 分片思想解决大数据量渲染问题
+    // 渲染百万条结构简单的大数据时 怎么使用分片思想优化渲染
+    // requestAnimationFrame 和 requestAnimationIdle 区别
+    const total = 1000
+    const max = 20
+    const pageTotal = total / max
+    const container = document.getElementById('container')
+    function loop(curTotal, curIndex) {
+      if(curTotal <= 0) {
+        return false;
+      }
+      const pageCount = Math.min(curTotal, max)
+      window.requestAnimationFrame(() => {
+        for(let i = 0; i < pageCount; i++) {
+          const li = document.createElement('li')
+          li.innerHTML = curIndex + i
+          container.append(li)
+        }
+        loop(curTotal - pageCount, curIndex + pageCount)
+      })
+    }
+    loop(total, 0)
+  </script>
+</body>
+</html>
