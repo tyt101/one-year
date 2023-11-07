@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // [
+    //     {
+    //         id: 1,
+    //         text: '节点1',
+    //         parentId: 0,
+    //         children: [
+    //             {
+    //                 id:2,
+    //                 text: '节点1_1',
+    //                 parentId:1
+    //             }
+    //         ]
+    //     }
+    // ]
+    // // 转成
+    // [
+    //     {
+    //         id: 1,
+    //         text: '节点1',
+    //         parentId: 0 //这里用0表示为顶级节点
+    //     },
+    //     {
+    //         id: 2,
+    //         text: '节点1_1',
+    //         parentId: 1 //通过这个字段来确定子父级
+    //     }
+    //     ...
+    // ]
+  </script>
+  <script>
+    const TreeConstruct = [
+      {
+          id: 1,
+          text: '节点1',
+          parentId: 0,
+          children: [
+              {
+                id:2,
+                text: '节点1_1',
+                parentId:1
+              },
+              {
+                id: 3,
+                text: '节点1_2',
+                parentId:1
+              }
+          ]
+      },
+      {
+        id: 5,
+          text: '节点2',
+          parentId: 0,
+          children: [
+              {
+                id:6,
+                text: '节点2_1',
+                parentId:2
+              },
+              {
+                id: 7,
+                text: '节点2_2',
+                parentId:2
+              }
+          ]
+      }
+    ]
+    function convertToList(Tree) {
+      let res = []
+      for(let i = 0; i < Tree.length; i++) {
+        res.push(Tree[i])
+        if(Tree[i].children) {
+          res.push(...convertToList(Tree[i].children))
+        }
+      }
+      return res.map(item => {
+        return {
+          id: item.id,
+          text: item.text,
+          parentId: item.parentId
+        }
+      })
+    }
+    console.log(convertToList(TreeConstruct))
+
+    function convert(Tree) {
+      let res = []
+      const dfs = (data) => {
+        data.forEach(item => {
+          if(item.children) {
+            dfs(item.children)
+            delete item.children
+          }
+          res.push(item)
+        })
+      }
+      dfs(Tree)
+      return res
+    }
+
+    console.log(convert(TreeConstruct))
+
+  </script>
+</body>
+</html>
