@@ -58,6 +58,7 @@ console.log(quickSort([1,39,32,12,34,33,21,15], 0))
 // 将当前p作为下一个徽标值返回
 
 
+
 // function quickSort(arr) {
 //   if (arr.length < 2) {
 //     return arr;

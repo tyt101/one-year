@@ -10,7 +10,6 @@
 // 输出: -1;
 
 function coinChange(coins, amount){
-
   let f = []
   f[0] = 0
   for(let i = 1; i <= amount; i++) {
