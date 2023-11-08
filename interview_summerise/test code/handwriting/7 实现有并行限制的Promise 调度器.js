@@ -57,5 +57,42 @@ scheduler.addTask(1200,() => {
   console.log('3333')
 })
 
-
 scheduler.startTack()
+
+// function sche(arr, limit) {
+//   let count = 0
+
+//   const q =(x) => {
+//     count++
+//     console.log("count:", count)
+//     if(count > limit) {
+//       console.log("===========")
+//       return
+//     }
+//     x.then(res => {
+//       console.log("qqq:", res)
+//     }).finally(() => {
+//       if(arr.length) {
+//         count--
+//         q(arr.shift())
+//       }
+//     })
+//   }
+//   q(arr.shift())
+// }
+// const a = new Promise(resolve => {
+//   setTimeout(() => {
+//     resolve(1)
+//   }, 1000);
+// })
+// const be = new Promise(resolve => {
+//   setTimeout(() => {
+//     resolve(2)
+//   }, 1000);
+// })
+// const ae = new Promise(resolve => {
+//   setTimeout(() => {
+//     resolve(3)
+//   }, 3000);
+// })
+// sche([a,be,ae], 1)
