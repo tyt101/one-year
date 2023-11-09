@@ -62,8 +62,60 @@ console.log(convertOBJ)
 
 // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 function convertStringify(obj) {
-  const convert = (objMM) => {
+
+  // 检查循环引用
+  const isCycle = (obj) => {
+
+    if(!obj || typeof obj !== 'object') return
+
+    const CycleSet = new Set()
+    cosnt detected = false
     
+    const isDetected = (obj) => {
+      if(CycleSet.has(obj)) {
+        detected = true
+      }
+      CycleSet.add(obj)
+      for(let o in obj) {
+        if(obj.hasOwnProperty(o)) {
+          isDetected(obj[o])
+        }
+      }
+    }
+
+    return detected;
+  }
+
+  if(typeof obj == 'bigint') {
+    throw new Error('bigInt Error')
+  }
+
+  if(isCycle(obj)) {
+    throw new Error('isCycle Error')
+  }
+
+  let specialUndefinedKey = ['undefined', 'function', 'symbol']
+  let specialNullKey = [NaN, Infinity, null]
+  // 非对象
+  if(typeof obj !== 'object' || obj == null) {
+    let result = obj
+
+    if(specialNullKey.includes(obj)) {
+      result = "null"
+    } else if(specialUndefinedKey.includes(typeof obj)) {
+      result = undefined
+    } else {
+      result = '"' + obj + '"'
+    }
+    return String(result)
+  } else if(typeof obj == 'object') {
+    // 包装类型
+    // cosnt isWrapper = Object.prototype.toString.call(obj).split(' ')[1].slice(-1)
+    // const types = ['string', 'number', 'boolean']
+
+    // Date 日期调用了 toJSON() 将其转换为了 string 字符串（同 Date.toISOString()），因此会被当做字符串处理。
+
+    // Map/Set/WeakMap/WeakSet，仅会序列化可枚举的属性。
   }
 }
 
