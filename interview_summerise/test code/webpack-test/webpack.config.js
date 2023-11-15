@@ -4,9 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = {
   target: 'web',
-  entry: './index.js',
+  entry: {
+    main: path.resolve(__dirname,'./index.js'),
+    pro: path.resolve(__dirname,'./show.js')
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, './dist'),
   },
   module: {
