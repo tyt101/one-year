@@ -15,7 +15,7 @@
   \*****************/
 /***/ ((module) => {
 
-eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 22\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 224\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
 
 /***/ })
 

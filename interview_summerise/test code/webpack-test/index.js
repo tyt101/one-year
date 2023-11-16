@@ -7,3 +7,4 @@ show('Webpack');
 console.log(bianliang.aaa)
 bianliang.aaa= 100
 console.log(bianliang.aaa)
+console.log("=====binss",bianliang)

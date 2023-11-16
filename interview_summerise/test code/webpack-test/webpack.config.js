@@ -56,6 +56,7 @@ module.exports = {
     minimize: true
   },
   // webpack5 的形式
+  // dev-server模块， 决定浏览器是执行刷新操作 还是热更新操作
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
@@ -63,5 +64,6 @@ module.exports = {
     open: true,
     port: 9000,
   },
+  // watch: true,
   mode: 'development',
 };

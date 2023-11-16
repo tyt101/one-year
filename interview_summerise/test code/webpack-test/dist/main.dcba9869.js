@@ -15,7 +15,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n// 通过 CommonJS 规范导入 show 函数\r\nconst {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\n// 执行 show 函数\r\nshow('Webpack');\r\nconsole.log(bianliang)\r\nbianliang = 324354\r\nconsole.log(bianliang)\n\n//# sourceURL=webpack://webpack-test/./index.js?");
+eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n__webpack_require__(/*! ./show1.js */ \"./show1.js\")\r\n// 通过 CommonJS 规范导入 show 函数\r\nconst {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\n// 执行 show 函数\r\nshow('Webpack');\r\nconsole.log(bianliang.aaa)\r\nbianliang.aaa= 100\r\nconsole.log(bianliang.aaa)\r\nconsole.log(\"=====\",12111)\n\n//# sourceURL=webpack://webpack-test/./index.js?");
 
 /***/ }),
 
@@ -36,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************/
 /***/ ((module) => {
 
-eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 22\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 224\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+
+/***/ }),
+
+/***/ "./show1.js":
+/*!******************!*\
+  !*** ./show1.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\nconsole.log('bianliang:',bianliang)\r\n\r\nsetTimeout(() => {\r\n  console.log('bianlia121ng:',bianliang)\r\n}, 1000);\r\n\r\n\r\n/**\r\n * Common.js 是动态的加载语句，代码发生在运行时 （同步加载）\r\n * Common.js 导出的是值得浅拷贝， 值可修改，但是容易引起变量污染\r\n */\n\n//# sourceURL=webpack://webpack-test/./show1.js?");
 
 /***/ })
 

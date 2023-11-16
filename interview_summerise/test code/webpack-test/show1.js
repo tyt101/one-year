@@ -2,7 +2,7 @@ const {show, bianliang} = require('./show.js');
 console.log('bianliang:',bianliang)
 
 setTimeout(() => {
-  console.log('bianliang:',bianliang)
+  console.log('bianlia121ng:',bianliang)
 }, 1000);
 
 
