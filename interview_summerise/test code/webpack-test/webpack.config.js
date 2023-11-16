@@ -4,9 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = {
   target: 'web',
-  entry: './index.js',
+  entry: {
+    main: path.resolve(__dirname,'./index.js'),
+    pro: path.resolve(__dirname,'./show.js')
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, './dist'),
   },
   module: {
@@ -53,6 +56,7 @@ module.exports = {
     minimize: true
   },
   // webpack5 的形式
+  // dev-server模块， 决定浏览器是执行刷新操作 还是热更新操作
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
@@ -60,5 +64,6 @@ module.exports = {
     open: true,
     port: 9000,
   },
+  // watch: true,
   mode: 'development',
 };
