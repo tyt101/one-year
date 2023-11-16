@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>脱离DOM元素的引用</title>
+</head>
+<body>
+  <div class="box">
+    <div class="box1">3232</div>
+    <div class="box2">544</div>
+  </div>
+
+  <div id="Node">node</div>
+  <script>
+    const box1 = document.querySelector('.box1')
+    const box2 = document.querySelector('.box2')
+    const box = document.querySelector('.box')
+
+    box.removeChild(box2)
+
+    let someResource = {
+      a: 1,
+    };  
+    setInterval(() => {  
+
+        let p = outer();
+        p();
+        const node = document.getElementById('Node');  
+        if(node) {  
+            node.innerHTML = JSON.stringify(someResource) 
+        }  
+        console.log("====")
+    }, 10);
+
+    function outer() {
+        const name = 'Jason';
+        return function inner(){
+            console.log(name);
+        }
+    }
+
+    
+</script>
+</body>
+
+</html>
