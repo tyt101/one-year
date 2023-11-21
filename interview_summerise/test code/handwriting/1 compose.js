@@ -25,5 +25,5 @@ function compose(...fn) {
   );
 }
 const a = compose(fn1, fn2, fn3, fn4);
-fn1(fn2(fn3(fn4(x)))) = > fn1(fn2(fn3(x + 4))) => fn1(fn2(x + 4 + 3)) => fn1(x + 4 + 3 + 2) = a(x)
+// fn1(fn2(fn3(fn4(x)))) = > fn1(fn2(fn3(x + 4))) => fn1(fn2(x + 4 + 3)) => fn1(x + 4 + 3 + 2) = a(x)
 console.log(a(1));
