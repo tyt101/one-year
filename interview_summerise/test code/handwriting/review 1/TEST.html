@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+</head>
+<body>
+    <button id="btn">走你</button>
+    <button id="btn2">回来</button>
+
+<script type="text/javascript">
+    var div = document.createElement('div');
+    document.body.appendChild(div);
+    div.style.width = "100px";
+    div.style.height = "100px";
+    div.style.background = "red";
+    div.style.position = "absolute";
+    div.style.left =  "0px";
+    div.style.top = "50px";
+
+    //走你按钮触发事件
+    document.getElementById('btn').onclick = function(){
+        var timeId = setInterval(function(){
+            div.style.left = parseInt(div.style.left) + 5  + "px";
+            if (div.style.left=='400px') {
+                clearInterval(timeId);
+            }
+          },50);
+        }
+        setTimeout(() => {
+          clearInterval(timeId);
+        }, 2000);
+
+    //回来按钮触发事件
+    document.getElementById('btn2').onclick = function(){
+    var timeId = setInterval(function(){
+        div.style.left = parseInt(div.style.left) - 5  + "px";
+        if (div.style.left=='0px') {
+            clearInterval(timeId);
+        }
+    },50);
+}
+const observer = new MutationObserver((mutations, observer) => {
+  mutations.forEach((mutation) => {
+    console.log(mutation);
+  });
+});
+const options = {
+  childList: true,
+  attributes: true,
+};
+observer.observe(div, options)
+</script>
+</body>
+</html>

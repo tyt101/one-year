@@ -26,7 +26,7 @@ class Scheduler {
   }
   // 调用task
   requestTask() {
-    if(!this.queue || this.runCount > this.maxCount || !this.queue.length) return
+    if(!this.queue || this.runCount >= this.maxCount || !this.queue.length) return
 
     this.runCount++
 
