@@ -6,20 +6,86 @@ function converJSON(obj) {
   const type = typeof obj
 
   // bigInt throw Error("can't convert bigInt type to Json")
+  if(type == 'bigint') throw Error("can't convert bigInt type to Json")
 
+  
   // circle throw Error("can't convert circular structure to JSON")
+  const isCircle = (obj) => {
+
+    if(!obj || typeof obj != 'object') return
+
+    let detected = false
+    let setMap = new Set()
+    const detect = (obj) => {
+      if(setMap.has(obj))
+        return (detected = true)
+      setMap.add(obj)
+
+      for(let o in obj) {
+        if(obj.hasOwnProperty(o)) {
+          detect(obj[o])
+        }
+      }
+    }
+    return detected
+  }
+  if(isCircle(obj)) throw Error("can't convert circular structure to JSON")
+
 
   // special undefined / function / symbol , ignore in object, return null in array
+  const specialIgnoreInObjButNullInArray = ['undefined', 'function', 'symbol']
+
+
   // special NaN / Infinitely / Null, return null
+  const specialNull = [NaN, Infinity, null]
+
 
   // not object
       // special undefined / function / symbol
       // special NaN / Infinitely / Null
       // base data structure
+  if(type !== 'object' || obj == null) {
+    let result = obj
+    if(specialIgnoreInObjButNullInArray.includes(obj)) {
+      return undefined
+    } else if(specialNull.includes(obj)) {
+      result = "null"
+    } else {
+      result = '"' + obj + '"'
+    }
+    return String(result)
+  }
   // obj
-      // wraper
+      // obj.toJSON == function
       // array
+      // wraper
       // iterator obj such as Map/WeakMap/Set/WeakSet...
+  else if(type == 'object'){
+    let wraper = ['string', 'boolean', 'number']
+    if(typeof obj.toJSON == 'function') {
+      converJSON(obj.toJSON())
+    } else if (Array.isArray(obj)) {
+      let result = obj.map(item => {
+        return specialIgnoreInObjButNullInArray.includes(typeof item) ? 'null' : converJSON(item)
+      })
+      return `[${result}]`.replace(/'/g, '"')
+    } else if(wraper.includes(getType(obj))) {
+      return String(obj)
+    }else {
+      let result = []
+      Object.keys(obj).forEach(key => {
+        // ignore symbol key
+        if(typeof key != 'symbol') {
+          let val = obj[key]
+          // 忽略对象中值为 undefined, null, symbol 的
+          if(!specialIgnoreInObjButNullInArray.includes(typeof val)) {
+            result.push(`"${key}":${converJSON(val)}`)
+          }
+        }
+      })
+      return `{${result}}`.replace(/'/g,'"')
+    }
+  }
 }
 
 
@@ -58,4 +124,6 @@ const obj = {
   fffff: new WeakSet(),
 }
 
-converJSON(obj)
+const res = converJSON(obj)
+console.log("RES:", res)
+
