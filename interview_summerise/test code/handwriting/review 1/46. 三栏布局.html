@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .shengbei-outer {
+      height: 200px;
+      padding-left: 100px;
+      padding-right: 200px;
+    }
+    .shengbei-center {
+      float: left;
+      width: 100%;
+      background-color: red;
+    }
+    .shengbei-left {
+      position: relative;
+      left: -100px;
+      float: left;
+      margin-left: -100%;
+      background-color: darkgray;
+      width: 100px;
+    }
+    .shengbei-right {
+      position: relative;
+      float: right;
+      width: 200px;
+      margin-right: -200px;
+      background-color: aliceblue;
+    }
+
+
+    /* 双飞翼布局 */
+    .shuangfeiyi-outer {
+      height: 200px;
+    }
+    .shuangfeiyi-left {
+      float: left;
+      width: 100px;
+      background-color: aqua;
+      margin-left: -100%;
+    }
+    .shuangfeiyi-right {
+      float: left;
+      width: 200px;
+      background-color: aquamarine;
+      margin-left: -200px;
+    }
+    .shuangfeiyi-wrapper {
+      float: left;
+      width: 100%;
+      background-color: darksalmon;
+    }
+    .shuangfeiyi-center {
+      margin-left: 100px;
+      margin-right: 200px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 圣杯布局 padding + margin-left -->
+
+  <div class="shengbei-outer">
+    <div class="shengbei-center">center</div>
+    <div class="shengbei-left">left</div>
+    <div class="shengbei-right">right</div>
+  </div>
+
+  <div class="shuangfeiyi-outer">
+    <div class="shuangfeiyi-wrapper">
+      <div class="shuangfeiyi-center">center</div>
+    </div>
+    <div class="shuangfeiyi-left">left</div>
+    <div class="shuangfeiyi-right">right</div>
+  </div>
+</body>
+</html>
