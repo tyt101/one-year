@@ -70,13 +70,13 @@ function convertStringify(obj) {
 
   // 检查循环引用
   const isCycle = (obj) => {
-
-    if(!obj || typeof obj !== 'object') return
-
+    
     const CycleSet = new Set()
     let detected = false
     
     const isDetected = (obj) => {
+      if(!obj || typeof obj !== 'object') return
+
       if(CycleSet.has(obj)) {
         detected = true
       }

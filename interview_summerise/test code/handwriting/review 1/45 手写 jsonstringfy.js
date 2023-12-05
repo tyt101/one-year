@@ -46,7 +46,7 @@ function converJSON(obj) {
       // base data structure
   if(type !== 'object' || obj == null) {
     let result = obj
-    if(specialIgnoreInObjButNullInArray.includes(obj)) {
+    if(specialIgnoreInObjButNullInArray.includes(typeof obj)) {
       return undefined
     } else if(specialNull.includes(obj)) {
       result = "null"
@@ -124,6 +124,8 @@ const obj = {
   fffff: new WeakSet(),
 }
 
-const res = converJSON(obj)
-console.log("RES:", res)
+// const res = converJSON(obj)
+// console.log("RES:", res)
 
+
+console.log(converJSON(function(){}))

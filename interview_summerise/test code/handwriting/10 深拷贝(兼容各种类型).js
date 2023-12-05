@@ -1,71 +1,32 @@
-// https://developer.aliyun.com/article/917861
-let stm = Symbol(123)
-let a = {
-  b: true,
-  c: undefined,
-  d: [null, function() {    //  全部转为null
-    console.log("===")
-  },Symbol(111)],
-  e: NaN,                   //  null
-  f: Infinity,              //  null
-  er: null,                 //  null
-  objS: Object('123'),      //  拷贝后为原始值'123'
-  objN: Object(123),        //  拷贝后为原始值123
-  objB: Object(true),       //  拷贝后为原始值true
-  func: function() {        //  被忽略
-    console.log("===")
-  },
-  sym: Symbol(222),         //  被忽略
-  und: undefined,           //  被忽略
-  [stm]: 11,
-}
-
-const str = JSON.stringify(a)
-// console.log('str:', str)
-// console.log('parse:', JSON.parse(str))
-
-// 找到所有枚举symbol
-const symbols = Object.getOwnPropertySymbols(a)
-for(let i = 0, len = symbols.length; i < len; i++) {
-  if(a.propertyIsEnumerable(symbols[i])) {
-    const value = a[symbols[i]]
-    // console.log("value:", value)
-  }
-}
-// 不可枚举symbols
-for(let i in a) {
-  if(a.propertyIsEnumerable(i)) {
-    // console.log(i)
-  }
-}
-
-/** =============================================分界线，上面为JSON.stringify示例================================================================ */
-
-
-/** =============================================下面为一个比较完整的深拷贝实现================================================== */
 function deepClone(obj) {
-  
+  // 1. 循环引用问题
+  // 2. wrapper问题
+  // 3. undefined / function / symbol
+  // 4. NaN / null / Infinitely
+  // 5. 正则
+  const weakMap = new WeakMap()
+
   const isObject = (input) => typeof input == 'object' || typeof input == 'function'
 
   const isFunction = (input) => typeof input == 'function'
 
   const getType = (input) => Object.prototype.toString.call(input).replace(/\[object (.*?)\]/, '$1').toLowerCase()
 
-  const handleRegEXp = (input) => {
+  const handleExp = (input) => {
     const {source, flags, lastIndex} = input
+
     const reg = new RegExp(source, flags)
     reg.lastIndex = lastIndex
     return reg
   }
 
-  const isWrapperType = (input) => {
-    const type = ['number', 'string', 'boolean', 'set', 'map', 'bigint', 'symbol', 'date', 'weakmap', 'weakset']
-    return type.includes(getType(input))
+  const isWrapper = (input) => {
+    const wrap = ['string','boolean', 'number', 'map', 'weakmap', 'set', 'weakset', 'date', 'bigint', 'symbol']
+    return wrap.includes(getType(input))
   }
 
   const handleWrapper = (input) => {
     const type = getType(input)
-    // ['number', 'string', 'boolean', 'set', 'map', 'bigint', 'symbol', 'date']
     switch (type) {
       case 'number':
         return Object(Number.prototype.valueOf.call(input))
@@ -77,7 +38,7 @@ function deepClone(obj) {
         return Object(Set.prototype.valueOf.call(input))
       case 'map':
         return Object(Map.prototype.valueOf.call(input))
-      case 'bigInt':
+      case 'bigint':
         return Object(BigInt.prototype.valueOf.call(input))
       case 'date':
         return Object(Date.prototype.valueOf.call(input))
@@ -85,55 +46,52 @@ function deepClone(obj) {
         return Object(WeakMap.prototype.valueOf.call(input))
       case 'weakset':
         return Object(WeakSet.prototype.valueOf.call(input))
+      case 'symbol':
+        return Object(Symbol.prototype.valueOf.call(input))
       default:
         break;
     }
   }
 
   const getPrototype = (input) => {
-    if(input.constructor == undefined) return Object.create(null)
-
-    if(typeof input.constructor == 'function' && (input.constructor != input || input.constructor != Object.prototype)) {
-      return Object.create(Object.getPrototypeOf(input))
-    }
-
-    return {}
+    return Object.create(Object.getPrototypeOf(input))
   }
 
   function copy(input) {
-    // !obj || function => return input
+
+    
     if(!isObject(input) || isFunction(input) || !input) return input
-    // regexp
-    if(getType(input) == 'regexp') return handleRegExp(input)
-    // wrapper
-    if(isWrapperType(input)) return handleWrapper(input)
-    // circle
-    const weakMap = new WeakMap()
-
+    
+    if(getType(input) == 'regexp') {
+      return handleExp(input)
+    }
+    
+    if(isWrapper(input)) {
+      return handleWrapper(input)
+    }
+    
     if(weakMap.has(input)) return weakMap.get(input)
+    const output = Array.isArray(input)? []: getPrototype(input)
 
-    const output = Array.isArray(input) ? []: getPrototype(input)
     weakMap.set(input, output)
-    // object
-
-    // !symbol
     for(let inp in input) {
       if(input.hasOwnProperty(inp)) {
         output[inp] = copy(input[inp])
       }
     }
-      // symbol
+
     const symbols = Object.getOwnPropertySymbols(input)
-    for(let sym in symbols) {
-      output[symbols[sym]] = copy(input[symbols[sym]])
+    for(let key in symbols) {
+      output[symbols[key]] = copy(input[symbols[key]])
     }
+
     return output
   }
 
   return copy(obj)
 }
 
-const obj = {
+const obj11 = {
   a: 1,
   b: '2',
   c: {
@@ -165,7 +123,9 @@ const obj = {
   ffff: new Set(),
   eeeee: new WeakMap(),
   fffff: new WeakSet(),
+
+  rgex: new RegExp(/123/,'g')
 }
-const newObj = deepClone(obj)
-console.log('oldobj:', obj)
+const newObj = deepClone(obj11)
+console.log('oldobj:', obj11)
 console.log('newObj',newObj)
