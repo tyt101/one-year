@@ -30,6 +30,27 @@
           return m
         }
     }).$mount('#app')
+
+
+    var id = "GLOBAL";
+    var obj = {
+      id: "OBJ",
+      a: function () {
+        console.log("====A:", arguments)
+        console.log(this.id);
+      },
+      b: (mmmm) => {
+        console.log("====:", arguments)
+        console.log(this.id);
+      },
+    };
+
+    const aaa = obj.a
+    aaa()
+    obj.a()
+    obj.b()
+    const bbb = obj.b
+    bbb()
   </script>
 </body>
 </html>
