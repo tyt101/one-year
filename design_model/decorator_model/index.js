@@ -1,3 +1,4 @@
+
 // 执行babel index.js --out-file babel_test.js  可生成装饰器装饰后的babel_test.js
 
 
