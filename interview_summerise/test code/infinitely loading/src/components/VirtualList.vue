@@ -121,7 +121,14 @@ export default {
 
       this.end = this.getEndIndex(scrollTop).index + 1
 
-      //此时的偏移量
+      //此时的偏移量      
+      // 难点：为什么要设置偏移量：
+      // content的高度由于phantom的高度问题，content被撑开到和phantom高度一致
+      // 当滚动的时候，content不断向下，但是由于只渲染了几条数据，数据仍在最顶部，所以要设置偏移量
+      // 把content往下偏移
+
+      // 比如一个空间heightSize 为100，刚开始移动了50，一半在视觉外，一半在视觉内，这里的是完全利用的滚动，还没有开始偏移。
+      // 等移动了100的时候，这个时候第0项已经被替换成了第1项，所以我们需要偏移100，才能展现出来新的第0项
       this.setStartOffset();
     }
   },
