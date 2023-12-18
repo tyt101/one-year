@@ -78,6 +78,7 @@ export default {
       }));
     },
     getStartIndex(scrollTop) {
+    console.log('this.positions', this.positions)
       return this.positions.find(item => item && item.bottom > scrollTop)
     },
     getEndIndex(scrollTop) {

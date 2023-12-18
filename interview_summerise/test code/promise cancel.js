@@ -39,6 +39,5 @@ const originalPromise=new Promise((resolve, reject) => {
 
 const promiseWithCancel=withCancel(originalPromise)
 
-promiseWithCancel.then(console.log)
 
 setTimeout(()=>promiseWithCancel.cancel('Hi, this is a cancel message'),1000)

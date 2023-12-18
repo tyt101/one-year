@@ -9,8 +9,9 @@ function run(content) {
 
   return new Promise((resolve, reject) => {
     function _next(val) {
+      let g;
       try {
-        const g = gen.next(val)
+        g = gen.next(val)
       } catch (error) {
         return reject(error)
       }
@@ -25,9 +26,10 @@ function run(content) {
   })
 }
 
-run(generator)
+// run(generator)
 
-
-
-
-// 
+// const ggg = generator()
+// ggg.next()
+// ggg.next(1)
+// ggg.next(2)
+// ggg.next(3)

@@ -2,11 +2,10 @@
 let arr = ['0.1.1', '2.3.3', '0.302.1', '4.3.5', '4.3.4.5']
 //arrSorted  =>  ['4.3.5','4.3.4.5','2.3.3','0.302.1','0.1.1']
 
-arr.sort((a, b) => {
+const res = arr.sort((a, b) => {
   let i = 0;
   const arr1 = a.split(".");
   const arr2 = b.split(".");
-  console.log(arr1, arr2)
   while (true) {
     const s1 = arr1[i];
     const s2 = arr2[i];
@@ -21,4 +20,4 @@ arr.sort((a, b) => {
   }
 });
 
-console.log([1,20,3,2,54].sort((a, b) => { return b - a}))
+console.log(res)
