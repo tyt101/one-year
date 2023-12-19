@@ -41,6 +41,7 @@ class MyPromise {
       this.resolveFun.push((val) => {
         try {
           let x = resolvedCallback(val)
+          console.log("=====RWSOLVE:", resolve)
           x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
         } catch (error) {
           reject(error)
@@ -133,9 +134,9 @@ let p3 = new MyPromise((resolve)=> {
   resolve(3)
 })
 
-MyPromise.all([p1,p2,p3]).then(res => { console.log("resAll:", res)})
+// MyPromise.all([p1,p2,p3]).then(res => { console.log("resAll:", res)})
 
-MyPromise.race([p1,p2,p3]).then(res => { console.log("resRace:", res)})
+// MyPromise.race([p1,p2,p3]).then(res => { console.log("resRace:", res)})
 
 let cancel = MyPromise.cancelPromise(new MyPromise((resolve) => {
   setTimeout(() => {
@@ -144,7 +145,7 @@ let cancel = MyPromise.cancelPromise(new MyPromise((resolve) => {
 }))
 
 cancel.promise.then(res => {
-  console.log(res)
+  console.log(res,'=======')
 })
 
 setTimeout(() => {
@@ -153,23 +154,23 @@ setTimeout(() => {
 
 
 
-let p11 = new Promise((resolve)=> {
-  setTimeout(() => {
-    resolve(1)
-  }, 1000);
-})
-let p22 = new Promise((resolve)=> {
-  setTimeout(() => {
-    resolve(2)
-  }, 2000);
-})
-let p33 = new Promise((resolve)=> {
-  setTimeout(() => {
-    resolve(3)
-  }, 3000);
-})
+// let p11 = new Promise((resolve)=> {
+//   setTimeout(() => {
+//     resolve(1)
+//   }, 1000);
+// })
+// let p22 = new Promise((resolve)=> {
+//   setTimeout(() => {
+//     resolve(2)
+//   }, 2000);
+// })
+// let p33 = new Promise((resolve)=> {
+//   setTimeout(() => {
+//     resolve(3)
+//   }, 3000);
+// })
 
-Promise.race([p11, p22, p33]).then(res => {
-  console.log("Promise Test Race:", res)
-})
+// Promise.race([p11, p22, p33]).then(res => {
+//   console.log("Promise Test Race:", res)
+// })
 
