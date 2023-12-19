@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // [
+    //   {
+    //       id: 1,
+    //       text: '节点1',
+    //       parentId: 0 //这里用0表示为顶级节点
+    //   },
+    //   {
+    //       id: 2,
+    //       text: '节点1_1',
+    //       parentId: 1 //通过这个字段来确定子父级
+    //   }
+    //   ...
+    // ]
+
+
+    // 转成
+    // [
+    //   {
+    //       id: 1,
+    //       text: '节点1',
+    //       parentId: 0,
+    //       children: [
+    //           {
+    //               id:2,
+    //               text: '节点1_1',
+    //               parentId:1
+    //           }
+    //       ]
+    //   }
+    // ]
+
+    const list = [
+      {
+          id: 1,
+          text: '节点1',
+          parentId: 0 //这里用0表示为顶级节点
+      },
+      {
+          id: 2,
+          text: '节点1_1',
+          parentId: 1 //通过这个字段来确定子父级
+      },
+      {
+          id: 3,
+          text: '节点1_2',
+          parentId: 0 //这里用0表示为顶级节点
+      },
+      {
+          id: 4,
+          text: '节点1_1_1',
+          parentId: 2 //通过这个字段来确定子父级
+      }
+    ]
+    function convert(list) {
+      let temp = {}
+      let res = []
+      for(let i = 0; i < list.length; i++) {
+        temp[list[i].id] = list[i]
+      }
+
+      for(let t in temp) {
+        if(+temp[t].parentId !== 0) {
+          // 非最外层
+          if(!temp[+temp[t].parentId].children) {
+            temp[+temp[t].parentId].children = []
+          }
+          temp[+temp[t].parentId].children.push(temp[t])
+        } else {
+          res.push(temp[t])
+        }
+      }
+      return res
+    }
+
+    console.log(convert(list))
+  </script>
+</body>
+</html>

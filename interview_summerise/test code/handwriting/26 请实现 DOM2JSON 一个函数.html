@@ -56,7 +56,7 @@
         let obj = {}
         obj.tag = template.tagName
         obj.children = []
-        template.childNodes.forEach(child => {
+        Array.from(template.children).forEach(child => {
           obj.children.push(translate(child))
         })
         return obj

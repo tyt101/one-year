@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./socketExtend.js"></script>
+  <script>
+    let mySocket;
+    document.getElementById('connect').addEventListener('click', () => {
+      connectWebSOcket()
+    })
+    document.getElementById('send').addEventListener('click', () => {
+      sendMsg('xxx')
+    })
+    document.getElementById('destroy').addEventListener('click', () => {
+      if(mySocket) {
+        mySocket.close()
+        mySocket = null
+      }
+    })
+    function sendMsg(content) {
+      mySocket.sendMsg(content)
+    }
+    function connectWebSOcket() {
+      mySocket = new MyWebSocket('url')
+      mySocket.init({
+        time: 1* 1000,        // 心跳间隔
+        timeout: 2* 1000,     // 接受心跳延时
+        reconnect: 3* 1000,   // 重连延时
+      })
+    }
+    function reconnectWebSocket() {
+      if(!mySocket) {
+        connectWebSOcket()
+      }
+
+      if(mySocket && mySocket.reconnectTimer) {
+        clearTimeout(mySocket.reconnectTimer)
+        mySocket.reconnectTimer = null
+        connectWebSOcket()
+      }
+    }
+    
+
+  </script>
+</body>
+</html>
