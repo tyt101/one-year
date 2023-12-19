@@ -6,7 +6,18 @@ const obj = {
      },
   b: [1, 3, {a: 2, b: 3}],
   c: 3
- }
+}
+// 结果返回如下
+// {
+//  'a.b': 1,
+//  'a.c': 2,
+//  'a.d.e': 5,
+//  'b[0]': 1,
+//  'b[1]': 3,
+//  'b[2].a': 2,
+//  'b[2].b': 3
+//   c: 3
+// }
 const obj1 = [1,2,3,4]
 const isObject = (obj) => typeof obj == 'object' && obj !== null
 const isArray = (obj) => Array.isArray(obj)

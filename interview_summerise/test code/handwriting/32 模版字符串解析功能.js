@@ -5,7 +5,7 @@ let data = {
 };
 console.log(render(template, data))
 
-
+// /\{\{(\w+)\}\}/g
 
 function render(template, data) {
   let reg = /\{\{(\w+)\}\}/g
@@ -13,4 +13,3 @@ function render(template, data) {
     return data[key]
   })
 }
-

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="iii">
+    <span>
+      <a>sss</a>
+    </span>
+    <span>
+      <a></a>
+      <a></a>
+    </span>
+  </div> 
+  <script>
+    const template = document.querySelector('.iii')
+
+    function translate(template) {
+      let obj = {}
+      obj.tag = template.tagName
+      obj.children = []
+
+
+      Array.from(template.children).forEach(child => {
+        obj.children.push(translate(child))
+      })
+
+      return obj
+    }
+
+    console.log(translate(template))
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // JSON 格式的虚拟 Dom 怎么转换成真实 Dom
+    // tag: 'DIV',
+    // attrs:{
+    // id:'app'
+    // },
+    // children: [
+    //   {
+    //     tag: 'SPAN',
+    //     children: [
+    //       { tag: 'A', children: [] }
+    //     ]
+    //   },
+    //   {
+    //     tag: 'SPAN',
+    //     children: [
+    //       { tag: 'A', children: [] },
+    //       { tag: 'A', children: [] }
+    //     ]
+    //   }
+    // ]
+    // }
+    // 把上诉虚拟Dom转化成下方真实Dom
+    {/* <div id="app">
+    <span>
+      <a></a>
+    </span>
+    <span>
+      <a></a>
+      <a></a>
+    </span>
+    </div> */}
+    
+    // 虚拟DOM
+    const virtureDOM = {
+      tag: 'DIV',
+      attrs:{
+        id:'app'
+      },
+      children: [
+        {
+          tag: 'SPAN',
+          children: [
+            { tag: 'A', children: ['2323','3434'] }
+          ]
+        },
+        {
+          tag: 'SPAN',
+          children: [
+            { tag: 'A', children: [] },
+            { tag: 'A', children: [] }
+          ]
+        }
+      ]
+    }
+
+    function  vNodeTranslateToRealNodeDom(vDOM) {
+      if(typeof vDOM == 'string') {
+        return document.createTextNode(vDOM)
+      }
+      const dom = document.createElement(vDOM.tag.toString().toLowerCase())
+
+      if(vDOM.attrs) {
+        for(let attr in vDOM.attrs) {
+          dom.setAttribute(attr, vDOM.attrs[attr])
+        }
+      }
+
+      if(!vDOM.children.length) {
+        return dom
+      }
+
+      for(let child in vDOM.children) {
+        dom.appendChild(vNodeTranslateToRealNodeDom(vDOM.children[child]))
+      }
+
+      return dom
+    }
+
+    console.log(vNodeTranslateToRealNodeDom(virtureDOM))
+  </script>
+</body>
+</html>

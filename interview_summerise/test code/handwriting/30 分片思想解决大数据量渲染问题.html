@@ -20,12 +20,14 @@
         return false;
       }
       const pageCount = Math.min(curTotal, max)
+      const fragment = document.createDocumentFragment()
       window.requestAnimationFrame(() => {
         for(let i = 0; i < pageCount; i++) {
           const li = document.createElement('li')
           li.innerHTML = curIndex + i
-          container.append(li)
+          fragment.append(li)
         }
+        container.append(fragment)
         loop(curTotal - pageCount, curIndex + pageCount)
       })
     }
