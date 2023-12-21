@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SharedWorker示例-页面2</title>
+  </head>
+  <body>
+    <h1>SharedWorker示例-页面2</h1>
+    <script>
+      // 兼容性判断
+      if (!SharedWorker) {
+        throw new Error('当前浏览器不支持SharedWorker')
+      }
+
+      // 创建共享线程
+      const worker = new SharedWorker('myShareWorker.js')
+
+      // 启动线程端口
+      worker.port.start()
+
+      // 向共享线程发送消息
+      worker.port.postMessage('get counter')
+
+      // 线程监听消息
+      worker.port.addEventListener('message', (e) => {
+        console.log('page2页面共享线程counter值：', e.data)
+      })
+    </script>
+  </body>
+</html>

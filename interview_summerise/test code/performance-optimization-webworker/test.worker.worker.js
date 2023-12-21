@@ -1,0 +1,1 @@
+onmessage=function(s){postMessage("你好 js")};
