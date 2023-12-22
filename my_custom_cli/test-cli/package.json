@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^9.4.1",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^11.1.0",
+    "inquirer": "^8.0.0",
+    "log-symbols": "^4.0.0",
+    "ora": "^5.0.0",
+    "path": "^0.12.7",
+    "update-notifier": "^4.0.0"
+  },
+  "name": "test-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "test-cli": "bin/index.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
