@@ -1,0 +1,74 @@
+{
+  "name": "vue2-typescript-export-data",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --mode development",
+    "serve": "vue-cli-service serve --mode production",
+    "build": "vue-cli-service build --mode production",
+    "lint": "eslint ./src --ext .vue,.js,.ts",
+    "format": "prettier --write ./src",
+    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
+    "prepare": "husky install",
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.4.9",
+    "axios": "^0.26.1",
+    "core-js": "^3.8.3",
+    "element-ui": "^2.15.8",
+    "file-saver": "^2.0.5",
+    "pinia": "^2.0.11",
+    "video.js": "^7.20.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1",
+    "xlsx": "0.16.9"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "^5.0.1",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^1.3.0",
+    "@vue/vue2-jest": "^27.0.0-alpha.2",
+    "babel-jest": "^27.0.6",
+    "commitlint": "^16.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^16.1.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.3.5",
+    "mockjs": "^1.1.0",
+    "prettier": "^2.5.1",
+    "style-resources-loader": "^1.5.0",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.5.5",
+    "vue-eslint-parser": "^8.3.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
+  }
+}
