@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+    }
+    img {
+      width: 100%;
+    }
+    
+    .photo {background-image: url('./1@.jpg'); height: 100px;}
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min--moz-device-pixel-ratio: 2) {
+      .photo {
+        background-image: url('./2@.png');
+        background-size: 100px 100px;
+      }
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min--moz-device-pixel-ratio: 3) {
+      .photo {
+        background-image: url('./3@.png');
+        background-size: 100px 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- http://qiutianaimeili.com/html/page/2021/06/2047vxxywm0gchj.html -->
+  <!-- https://www.shejidaren.com/css-device-pixel-ratio.html -->
+  <!-- https://web.dev/learn/performance/image-performance?hl=zh-cn 性能优化内 -->
+  <div class="photo"></div>
+
+  <!-- 问题：调节窗口大小没有触发响应式变更图片 -->
+
+  <!-- 原因：在浏览器有缓存中有更高分辨率的图片时不会加载更低分辨率的图片，可以在小窗口下清空缓存，然后就会加载低分辨率的图片 -->
+
+  <img src="./1@.jpg" alt="ASS" srcset="./1@.jpg 500vw, ./3@png 1000vw">
+  <script>
+    console.log(devicePixelRatio)
+  </script>
+</body>
+</html>
