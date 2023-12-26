@@ -97,3 +97,55 @@ function merge(arrA, arrB) {
 }
 
 console.log(mergeSort([1,5,3,2,6,9,7]))
+
+
+function swap(arr, l, r) {
+  let temp = arr[l]
+  arr[l] = arr[r]
+  arr[r] = temp
+}
+function searchPivot(arr, left, rigth) {
+  let pivotVal = arr[Math.floor(left + (rigth - left) / 2)]
+  
+  let l = left
+  let r = rigth
+
+  while(l <= r) {
+    while(arr[l] < pivotVal) {
+      l++
+    }
+
+    while(arr[r] > pivotVal) {
+      r--
+    }
+
+    if(l <= r) {
+      swap(arr, l, r)
+      l++
+      r--
+    }
+  }
+
+
+  return l
+}
+
+function quickSortComplex(arr, left = 0, rigth = arr.length - 1) {
+  if(arr.length < 2) return arr
+
+  let pivot = searchPivot(arr, left, rigth)
+  if(left < pivot - 1) {
+    quickSortComplex(arr, left, pivot - 1)
+  }
+
+  if(rigth > pivot) {
+    quickSortComplex(arr, pivot, rigth)
+  }
+
+  return arr
+}
+
+
+
+
+console.log(quickSortComplex([1,5,3,2,6,9,7]))

@@ -57,6 +57,66 @@
       margin-left: 100px;
       margin-right: 200px;
     }
+
+    
+    /* 浮动 */
+
+    .float-l {
+      float: left;
+      background-color: aqua;
+      width: 100px;
+    }
+    .float-r {
+      float: right;
+      width: 200px;
+      background-color: aquamarine;
+    }
+    .float-c {
+      /* overflow: hidden; */
+      /* margin: 0 200px 0 100px; */
+      width: calc(100% - 200px);
+      background-color: darksalmon;
+    }
+
+
+    /* grid */
+
+    .grid-outer {
+      display: grid;
+      grid-template-columns: 100px auto 200px;
+    }
+
+    /* flex */ 
+    .flex-outer {
+      display: flex;
+    }
+    .flex-l {
+      width: 100px;
+    }
+    .flex-r {
+      width: 200px;
+    }
+    .flex-c {
+      flex: 1;
+    }
+
+    /* position */
+    .position-outer {
+      position: relative;
+    }
+    .position-l {
+      left: 0;
+      position: absolute;
+    }
+    .position-r {
+      right: 170px;
+      position: absolute;
+    }
+    .position-c {
+      left: 100px;
+      right: 200px;
+      position: absolute;
+    }
   </style>
 </head>
 <body>
@@ -74,6 +134,32 @@
     </div>
     <div class="shuangfeiyi-left">left</div>
     <div class="shuangfeiyi-right">right</div>
+  </div>
+
+  <div class="float-outer">
+    <div class="float-l">left</div>
+    <div class="float-r">right</div>
+    <div class="float-c">center</div>
+  </div>
+
+
+  <div class="grid-outer">
+    <div class="grid-l">left</div>
+    <div class="grid-c">center</div>
+    <div class="grid-r">right</div>
+  </div>
+
+  <div class="flex-outer">
+    <div class="flex-l">left</div>
+    <div class="flex-c">center</div>
+    <div class="flex-r">right</div>
+  </div>
+
+
+  <div class="position-outer">
+    <div class="position-l">left</div>
+    <div class="position-c">center</div>
+    <div class="position-r">right</div>
   </div>
 </body>
 </html>

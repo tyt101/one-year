@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const TreeConstruct = [
+    {
+        id: 1,
+        text: '节点1',
+        parentId: 0,
+        children: [
+            {
+              id:2,
+              text: '节点1_1',
+              parentId:1
+            },
+            {
+              id: 3,
+              text: '节点1_2',
+              parentId:1
+            }
+        ]
+    },
+    {
+      id: 5,
+        text: '节点2',
+        parentId: 0,
+        children: [
+            {
+              id:6,
+              text: '节点2_1',
+              parentId:2
+            },
+            {
+              id: 7,
+              text: '节点2_2',
+              parentId:2
+            }
+        ]
+    }
+  ]
+
+
+  function treeConvertToList(node) {
+    let list = []
+    function convet(node) {
+      for(let i = 0; i < node.length; i++) {
+        list.push(node[i])
+        if(node[i].children) {
+          convet(node[i].children)
+        }
+      }
+    }
+    convet(node)
+
+    return list.map(li => {
+      return {
+        id: li.id,
+        text: li.text,
+        parentId: li.parentId
+      }
+    })
+  }
+
+  console.log(treeConvertToList(TreeConstruct))
+  </script>
+</body>
+</html>
