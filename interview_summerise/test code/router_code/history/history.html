@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <ul>
+      <li><a href="/page1">page1</a></li>
+      <li><a href="/page2">page2</a></li>
+    </ul>
+    <div id="route-view"></div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', Load)
+    window.addEventListener('popState', PopState)
+
+    let routeView = null
+    function Load (){
+      routeView = document.getElementById('route-view')
+
+      PopState()
+
+      const aAll = document.querySelectorAll('a[href]')
+
+      aAll.forEach(curA => {
+        return curA.addEventListener('click', (e) => {
+          e.preventDefault()
+          const href = curA.getAttribute('href')
+          history.pushState(null, '', href)
+
+          PopState()
+        })
+      })
+
+    }
+
+    function PopState(){
+      console.log('location:', location.pathname)
+      switch(location.pathname) {
+        case '/page1':
+          routeView.innerHTML = '/page1'
+          return;
+        case '/page2':
+          routeView.innerHTML = '/page2'
+          return;
+        default:
+          routeView.innerHTML = '/page1'
+          return;
+      }
+    }
+  </script>
+</body>
+</html>
