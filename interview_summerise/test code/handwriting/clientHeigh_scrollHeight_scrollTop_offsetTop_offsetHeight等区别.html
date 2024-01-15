@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .position-outer {
+      padding: 35px;
+      border: 15px solid red;
+      width: 400px;
+      height: 400px;
+      overflow: auto;
+    }
+    .position-inner {
+      padding: 35px;
+      border: 15px solid green;
+      width: 300px;
+      height: 300px;
+      height: 500px;
+    }
+    .not-position {
+      padding: 35px;
+      border: 15px solid yellowgreen;
+      width: 200px;
+      height: 200px;
+    }
+    .box1 {
+      padding: 35px;
+      border: 15px solid blue;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="position-outer" style="position: relative">
+    <div class="position-inner" style="position: relative">
+      <div class="not-position">
+        <div class="box1" style="position: fixed"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const divs = document.getElementsByTagName('div')
+  Array.from(divs).forEach(item => {
+    console.log("ITEM:", item)
+
+    // clientHeight: height + padding
+    console.log('clientHeight:', item.clientHeight)
+    // offsetHeight: height + padding + border 1
+    console.log('offsetHeight:', item.offsetHeight)
+    // scrollHeigth/scrollWidth代表元素padding以内的整体高度，当前可见部分高度+不可见部分的元素的高度，而可见部分的高度其实就是clientHeight，也就是scrollHeight>=clientHeight恒成立。
+    console.log('scrollHeight:', item.scrollHeight)
+    // 滚动条高度 (可读可写)
+    console.log('scrollTop:', item.scrollTop)
+
+
+    item.addEventListener('scroll', ()=> {
+      console.log('scrollTop:', item,item.scrollTop)
+    })
+
+
+    // 所以，懒加载可以用:
+    // scrollTop + clientHeight >= scrollHeight + 200(提前多少高度，开始加载)
+  })
+</script>
+</html>
