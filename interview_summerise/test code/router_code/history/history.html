@@ -30,6 +30,7 @@
         return curA.addEventListener('click', (e) => {
           e.preventDefault()
           const href = curA.getAttribute('href')
+          console.log('HREF:', href)
           history.pushState(null, '', href)
 
           PopState()

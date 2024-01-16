@@ -15,21 +15,24 @@ function withCancel(originalPromise){
       }
   })
 
-  // 包装后的promise，本质是Promise.race的返回值，Promise.race传参是原始的promise和辅助的promise
-  const groupPromise=Promise.race([originalPromise,cancelPromise])
-      .catch(e=>{
-          // isCancelled标志位，表明用户是否主动触发cancel。如果是主动触发，不要抛出异常
-          if(isCancelled){
-              console.log('promise is cancelled')
-              console.log(e)
-              return new Promise(()=>{})
-          }
-          else return Promise.reject(e)
-      })
-  console.log('==groupPromise==:', groupPromise)
-  let m = Object.assign(groupPromise, {cancel})
-  console.log('m:', m)
-  return m
+    // 包装后的promise，本质是Promise.race的返回值，Promise.race传参是原始的promise和辅助的promise
+    const groupPromise=Promise.race([originalPromise,cancelPromise])
+        .then(res => {
+            console.log("RES:", res)
+        })
+        .catch(e=>{
+            // isCancelled标志位，表明用户是否主动触发cancel。如果是主动触发，不要抛出异常
+            if(isCancelled){
+                console.log('promise is cancelled')
+                console.log(e)
+                return new Promise(()=>{})
+            }
+            else return Promise.reject(e)
+        })
+    console.log('==groupPromise==:', groupPromise)
+    let m = Object.assign(groupPromise, {cancel})
+    console.log('m:', m)
+    return m
 }
 
 
@@ -41,3 +44,4 @@ const promiseWithCancel=withCancel(originalPromise)
 
 
 setTimeout(()=>promiseWithCancel.cancel('Hi, this is a cancel message'),1000)
+// setTimeout(()=>promiseWithCancel.cancel('Hi, this is a cancel message'),6000)

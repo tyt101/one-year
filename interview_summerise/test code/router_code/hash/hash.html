@@ -28,6 +28,7 @@
     function HashChange() {
       // 每次触发 hashchange 事件，通过 location.hash 拿到当前浏览器地址的 hash 值
       // 根据不同的路径展示不同的内容
+      console.log('location.hash', location.hash)
       switch(location.hash) {
         case '#/page1':
           routeView.innerHTML = 'page1'
