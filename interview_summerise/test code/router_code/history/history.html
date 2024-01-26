@@ -10,14 +10,13 @@
     <ul>
       <li><a href="/page1">page1</a></li>
       <li><a href="/page2">page2</a></li>
+      <li onclick="handleClick">page2</li>
     </ul>
-    <div id="route-view"></div>
   </div>
 
   <script>
     window.addEventListener('DOMContentLoaded', Load)
     window.addEventListener('popState', PopState)
-
     let routeView = null
     function Load (){
       routeView = document.getElementById('route-view')
