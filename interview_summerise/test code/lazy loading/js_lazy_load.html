@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+        display: block;
+        width: 100%;
+        height: 700px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img data-src="./images/1.png" alt="">
+  <img data-src="./images/2.png" alt="">
+  <img data-src="./images/3.png" alt="">
+  <img data-src="./images/4.png" alt="">
+  <img data-src="./images/5.png" alt="">
+</body>
+
+<!-- 1:元素偏移量T - scrollTop <= clientHeight -->
+<script>
+  // 获取 img
+  const imgs = document.querySelectorAll('img')
+
+  // lazyLoad function
+
+  function getImgTop(img) {
+    let T = img.offsetTop
+    // offsetTop 是 元素与 offsetParent 的距离， 所以需要循环获取直到页面顶部
+    while(img = img.offsetParent) {
+      T += img.offsetTop
+    }
+    return T
+  }
+  function lazyLoad(imgs) {
+    // visible height 可视区高度
+    var H = document.documentElement.clientHeight
+    // scrollTop 可视区顶部距离页面顶部高度
+    var S = document.documentElement.scrollTop || document.body.scrollTop
+    // img's offsetTop 懒加载元素偏移量
+    for(let i = 0; i < imgs.length; i++) {
+      const O = getImgTop(imgs[i])
+      if(O - S <= H) {
+        imgs[i].src = imgs[i].getAttribute('data-src')
+      }
+    }
+  }
+
+  // 监听scroll事件
+  window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+    lazyLoad(imgs);
+  }
+</script>
+<script>
+    // 获取 img
+    const imgss = document.querySelectorAll('img')
+    function isInVisiblePlace(img) {
+      const {top, bottom, left, right} = img.getBoundingClientRect()
+
+      const clientHeight = window.innerHeight || document.documentElement.clientHeight
+
+      return top <= clientHeight
+    }
+    function lazyLoad(imgss) {
+      for(let i = 0; i < imgss.length; i++) {
+        if(isInVisiblePlace(imgss[i])) {
+          imgss[i].src = imgss[i].getAttribute('data-src')
+        }
+      }
+    }
+    // 监听scroll事件
+    window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+      lazyLoad(imgss);
+    }
+</script>
+<script>
+let imgsss = document.querySelectorAll("img")
+
+// option基础配置
+const option = {
+  root: null, // 未传/null ，默认使用顶级文档的视窗 ==> 可视区
+  rootMargin: '0px 0px -100px 0px', // 距离多远加载
+  threshold: 0 // 设置一些特定的相交比例，当到了就会自动触发
+}
+// callback 中处理src替换
+const callback = (entries) => {
+  entries.forEach(item => {
+    if(item.isIntersecting) {
+      item.target.src = item.target.dataset.src; // 加载了
+      observer.unobserve(item.target) // 停止监听
+    }
+  })
+}
+let observer = new IntersectionObserver(callback, option)
+
+// 加入监听
+imgsss.forEach(item => observer.observe(item))
+</script>
+</html>

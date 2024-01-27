@@ -75,7 +75,7 @@ const exportCsv = async (total = 0, size = 1000, onProcess = () => {}) => {
     }
     // 遍历完成时，固定进度为 100%
     onProcess(100);
-    console.log('==========:', cvsArray);
+    // blob格式：二进制类型的大对象
     const blob = new Blob([String.fromCharCode(0xfeff), ...cvsArray], {
       type: 'text/plain;charset=utf-8',
     });

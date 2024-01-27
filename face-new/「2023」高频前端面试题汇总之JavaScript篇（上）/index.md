@@ -4,7 +4,6 @@
 ## 一、数据类型
 
 ### 1. JavaScript有哪些数据类型，它们的区别？
-
 JavaScript共有八种数据类型，分别是 Undefined、Null、Boolean、Number、String、Object、Symbol、BigInt。
 
 
@@ -40,7 +39,16 @@ JavaScript共有八种数据类型，分别是 Undefined、Null、Boolean、Numb
 
 - 栈区内存由编译器自动分配释放，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。 
 - 堆区内存一般由开发着分配释放，若开发者不释放，程序结束时可能由垃圾回收机制回收。
+### 1. What data types Javascript has and how they differ?
+Javascript has 8 data types, they are Undefined, Null, String, Number, Boolean, Object, Symbole and BigInt.
 
+Symbols and BigInt are new data types in ES6.
+- Symbol represents a unique and immutable data type created to resolve possible global variable conflicts.
+- BigInt is a numeric type of data that can represent intergers in any precision format, bigInt can be used to safely store and operate large interges, even if the Number has outside the range of safe integers that Number can represent
+
+These data can be divided into raw data types and reference data types.
+- raw data types include Undefined , Null, Boolean, String and Number, they are stored in Stack.(simple data segment, occupe a small space and have a fixed size, they belong to the frequently used data)
+- reference data types include Object, Array and Function, they are stored in Heap.(occupe a big space and flexible size, if they are stored in the stack, it will affect the performance of the program. reference data types store their pointer in the stack, the pointer points to the starting address of the entity(实体) in the heap.)
 ### 2. 数据类型检测的方式有哪些
 
 **（1）typeof**
@@ -122,6 +130,9 @@ console.log(a.call(null));
 
 这是因为toString是Object的原型方法，而Array、function等**类型作为Object的实例，都重写了toString方法**。不同的对象类型调用toString方法时，根据原型链的知识，调用的是对应的重写之后的toString方法（function类型返回内容为函数体的字符串，Array类型返回元素组成的字符串…），而不会去调用Object上原型toString方法（返回对象的具体类型），所以采用obj.toString()不能得到其对象类型，只能将obj转换为字符串类型；因此，在想要得到对象的具体类型时，应该调用Object原型上的toString方法。
 
+### 2. What are the ways of data type detection
+We can use typeof, instanceof, constructor and Object.prototype.toString.call to detect data types.
+
 ### 3. 判断数组的方式有哪些
 
 - 通过Object.prototype.toString.call()做判断
@@ -153,7 +164,8 @@ obj instanceof Array
 ```javascript
 Array.prototype.isPrototypeOf(obj)
 ```
-
+### 3. What are the ways to determine the array
+We can use Array.isArray, instanceOf, constructor, Array.prototype.isPrototypeOf and Object.prototype.toString.call to determine the array.
 ### 4. null和undefined区别
 
 首先 Undefined 和 Null 都是基本数据类型，这两个基本数据类型分别都只有一个值，就是 undefined 和 null。
@@ -166,7 +178,8 @@ undefined 在 JavaScript 中不是一个保留字，这意味着可以使用 und
 
 
 当对这两种类型使用 typeof 进行判断时，Null 类型化会返回 “object”，这是一个历史遗留的问题。当使用双等号对两种类型的值进行比较时会返回 true，使用三个等号时会返回 false。
-
+### 4. The difference of null and undefined
+First of all Null and Undefined both are basic data types and they only have one value , that is null and undefined. undefined means don't define any value , null means an empty object. undefined is usually returned when a variable is declared but not yet defined , and null is maily used to assign a variable that may return an object as initialization.
 ### 5. typeof null 的结果是什么，为什么？
 
 typeof null 的结果是Object。
@@ -193,6 +206,9 @@ typeof null 的结果是Object。
 
 
 那也就是说null的类型标签也是000，和Object的类型标签一样，所以会被判定为Object。
+### 5. what is the result of typeof null, why?
+The result of typeof null is Object 。
+The type label of null is 000, it's the same as the type label of object, so it is determined to be Object.
 
 ### 6. intanceof 操作符的实现原理及实现
 
@@ -214,7 +230,8 @@ function myInstanceof(left, right) {
   }
 }
 ```
-
+### 6. The implementation principle and implementation of instance operator.
+A instance of B, obtains the prototype of A through getPrototypeOf, then searchs in the prototype chain of B, if the prototype of A can be found, then returns true.
 ### 7. 为什么0.1+0.2 ! == 0.3，如何让其相等  
 
 在开发过程中遇到类似这样的问题：
@@ -302,11 +319,19 @@ function numberepsilon(arg1,arg2){
 
 console.log(numberepsilon(0.1 + 0.2, 0.3)); // true
 ```
+### 7. why 0.1+0.2 !== 0.3 , how to make it equal
+
+Fist of all, Javascript store data by binary way and follow the priciple of IEEE 754, so there are only 64 fixed length to store, only 53 validable number, and follow the priciple of '0 rounded off 1'.
+
+Then, convert 0.1 and 0.2 to binary, they are the infinite loop of binary decimals, so when we add 0.1 and 0.2, we can't get 0.3. we can use toFixed to keep two decimals and use Number.EPSILON to set a margin of error.
 
 ### 8. 如何获取安全的 undefined 值？
 
 因为 undefined 是一个标识符，所以可以被当作变量来使用和赋值，但是这样会影响 undefined 的正常判断。表达式 void ___ 没有返回值，因此返回结果是 undefined。void 并不改变表达式的结果，只是让表达式不返回值。因此可以用 void 0 来获得 undefined。
 
+
+### 8. How to get safe undefined value
+by using void 0.
 ### 9. typeof NaN 的结果是什么？
 
 NaN 指“不是一个数字”（not a number），NaN 是一个“警戒值”（sentinel value，有特殊用途的常规值），用于指出数字类型中的错误情况，即“执行数学运算没有成功，这是失败后返回的结果”。
@@ -317,11 +342,16 @@ typeof NaN; // "number"
 
 NaN 是一个特殊值，它和自身不相等，是唯一一个非自反（自反，reflexive，即 x === x 不成立）的值。而 NaN !== NaN 为 true。
 
+### 9. The result of typeof NaN
+It's a number
 ### 10. isNaN 和 Number.isNaN 函数的区别？
 
 - 函数 isNaN 接收参数后，会尝试将这个参数转换为数值，任何不能被转换为数值的的值都会返回 true，因此非数字值传入也会返回 true ，会影响 NaN 的判断。
 - 函数 Number.isNaN 会首先判断传入参数是否为数字，如果是数字再继续判断是否为 NaN ，不会进行数据类型的转换，这种方法对于 NaN 的判断更为准确。
 
+### 10. The difference of isNaN and Number.isNaN?
+- when isNaN receieves an argument, it will attempt to convert it to be a number, Any value cannot be converted to a number will return true, so non-numeric values will alse return true, affecting NaN's judgement.
+- Number.isNaN function will first determine whether the argument is a number, if it is a number, then continue to determine whether it is NaN, and do not convert the data type, the method is more accurate to determine NaN.
 ### 11. == 操作符的强制类型转换规则？
 
 对于 `==` 来说，如果对比双方的类型**不一样**，就会进行**类型转换**。假如对比 `x` 和 `y` 是否相同，就会进行如下判断流程：
