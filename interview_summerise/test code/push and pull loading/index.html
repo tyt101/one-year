@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .re {
+      height: 300px;
+      background-color: black;
+    }
+    .box {
+      height: 3000px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="re"></div>
+  <div class="box"></div>
+
+  <script>
+    const box = document.querySelector('box')
+    const distance = 100
+    const refresh = ()=> {console.log("加载了~")}
+    const upPullRefresh = () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      const scrollHeight = window.scrollHeight || document.documentElement.scrollHeight
+      const clientHeight = document.documentElement.clientHeight
+      if(scrollTop + clientHeight + distance >= scrollHeight) {
+        refresh()
+      }
+    }
+    const downPullRefresh = () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      if(scrollTop <= 0) {
+        refresh()
+      }
+    }
+
+    window.onscroll = function() {
+      upPullRefresh()
+      downPullRefresh()
+    }
+  </script>
+</body>
+</html>
