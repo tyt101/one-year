@@ -12,6 +12,12 @@
   C.prototype = new P()
 
   // problem fix mixtured
+  /**
+   * 为什么 c2.getPName() 输出的数组中包含 'c1'？
+      原因是你将 C 的原型设置为 P 的一个新实例。
+      这意味着 C 的所有实例（如 c1 和 c2）共享同一个 play 数组（它们实际上都是从 P 的实例上继承的同一个数组）。
+      因此，当你修改 c1.play 时，你实际上也在修改 c2.play，因为它们都是指向同一个数组的引用。
+   */
   const c1 = new C() 
   c1.play.push('c1')
   const c2 = new C()

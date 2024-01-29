@@ -10,7 +10,7 @@ Parent.prototype.ppp1Name = function(){
 
 function Child(name) {
   Parent.call(this)
-  this.name = name
+  this.name = name 
 }
 
 Child.prototype = Object.create(Parent.prototype)

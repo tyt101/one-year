@@ -586,7 +586,54 @@ CSS 工程化是为了解决以下问题：
 - 支持定义 css 变量；
 - 提供计算函数；
 - 允许对代码片段进行 extend 和 mixin；
+```css
+/* sass: extend */
+.button {  
+  display: inline-block;  
+  margin: 1em;  
+  padding: 0.5em 1em;  
+  background-color: skyblue;  
+  color: white;  
+}  
+  
+.special-button {  
+  @extend .button;  
+  background-color: orange;  
+}
+
+/* sass:mixin */
+@mixin border-radius($radius) {  
+  -webkit-border-radius: $radius;  
+  -moz-border-radius: $radius;  
+  -ms-border-radius: $radius;  
+  border-radius: $radius;  
+}  
+  
+.box {  
+  @include border-radius(10px);  
+}
+
+/* less:mixin */
+.border-radius(@radius) {  
+  -webkit-border-radius: @radius;  
+  -moz-border-radius: @radius;  
+  -ms-border-radius: @radius;  
+  border-radius: @radius;  
+}  
+  
+.box {  
+  .border-radius(10px);  
+}
+```
 - 支持循环语句的使用；
+```css
+/* sass */
+@for $i from 1 through 5 {  
+  .col-#{$i} {  
+    width: (100% / 5) * $i;  
+  }  
+}
+```
 - 支持将 CSS 文件模块化，实现复用。
 
 **（2）PostCss：PostCss 是如何工作的？我们在什么场景下会使用 PostCss？**

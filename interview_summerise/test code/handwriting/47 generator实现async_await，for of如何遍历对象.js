@@ -26,10 +26,36 @@ function run(content) {
   })
 }
 
-// run(generator)
+run(generator)
 
 // const ggg = generator()
 // ggg.next()
 // ggg.next(1)
 // ggg.next(2)
 // ggg.next(3)
+
+
+/** 如何遍历对象 */
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3
+}
+
+obj[Symbol.iterator] = function() {
+  const keys = Object.keys(this)
+  let count = 0;
+
+  return {
+    next: () => {
+      return {
+        value: this[keys[count ++]],
+        done: count > keys.length
+      }
+    }
+  }
+}
+
+for(let o of obj) {
+  console.log(o)
+}
