@@ -386,6 +386,15 @@ It's a number
 其流程图如下：
 ![](3.png)
 
+### 11. The coercion rules for the "==" operator. （The rules of implicit type conversion for the "==" equality operator.）
+1. First,it'll determine whether the types of the two are the same. If they are the same, it'll compare their value.
+2. If they are not the same, then try to convert.
+3. If one operand is null and the other is undefine, return true.
+4. If one operand is a number and the other is string, the string will be converted to a number and the comparison will be made.
+5. If one of the operands(操作数) is a boolean, it will be converted to a number before the comparision is made.
+6. If one operand is an object and the other is a primitive(string, number, boolean), the object will be converted to a primitive using its valueof or toString methods. 
+
+
 ### 12. 其他值到字符串的转换规则？
 
 - Null 和 Undefined 类型 ，null 转换为 "null"，undefined 转换为 "undefined"，
@@ -394,6 +403,13 @@ It's a number
 - Symbol 类型的值直接转换，但是只允许显式强制类型转换，使用隐式强制类型转换会产生错误。
 - 对普通对象来说，除非自行定义 toString() 方法，否则会调用 toString()（Object.prototype.toString()）来返回内部属性 [[Class]] 的值，如"[object Object]"。如果对象有自己的 toString() 方法，字符串化时就会调用该方法并使用其返回值。
 
+
+### 12. what are the rules for converting other values into strings?
+- Null will be converted to double quotes null, so do undefine
+- the type of Boolean, true will be converted to double quotes true, so do false.
+- Number will be converted directly, but vary small and very large numbers are used in exponential form
+- Symbol will be converted directly, but only explicit casts are allowed, using implicit casts results in errors
+- To ordinary object, it will call the toString() to return internal properties of value except custom toString()
 ### 13. 其他值到数字值的转换规则？
 
 - Undefined 类型的值转换为 NaN。
@@ -409,7 +425,14 @@ It's a number
 
 
 如果 valueOf() 和 toString() 均不返回基本类型值，会产生 TypeError 错误。
-
+### 13. What the rules for converting other values into numbers ?
+- Undefinede will be convertede to NaN;
+- Null will be converted to 0;
+- the type of boolean, true will be converted to 1 and false will be converted to 0;
+- the converting of string is similar to use the function of Number(), if it includes non-number, it will be converted to NaN, else empty string will be 0;
+- convert the type of Symbol is erroring
+- ordinary object, will firstly convert to corresponding primitive type value, if a non-numeric primitive type value is returned, it is then coerced to a number by following the rules above.
+- 备注：above(以上)below(以下)
 ### 14. 其他值到布尔类型的值的转换规则？
 
 以下这些是假值：
@@ -421,6 +444,16 @@ It's a number
 
 
 假值的布尔强制类型转换结果为 false。从逻辑上说，假值列表以外的都应该是真值。
+### 14. what the rule of converting other values into booleans.
+
+the following are fasly value:
+- undefined
+- null
+- false
+- +0,-0,NAN
+- ""
+
+When coerced(强制/koʊˈɜːrs/) to a boolean, falsy values result in false. Logically speaking, anything other than the falsy values listed should be truthy.
 
 ### 15. || 和 && 操作符的返回值？
 
@@ -434,12 +467,30 @@ It's a number
 
 || 和 && 返回它们其中一个操作数的值，而非条件判断的结果
 
+### 15. What are the return values of the || (logical OR) and && (logical AND) operators?
+||(logical OR) and &&(logical AND) firstly perform conditional evaluation on the first operand,It will be coerced to boolean type if it's not a boolean, then continue to perform conditional evaluation.
+
+- for ||(logical OR), it will return the value of first operand if the conditional evaluates to true, but return second operand.
+- &&(logical AND) is opposite, if the conditional evaluates to true, it returns the value of the second operand, If it evaluates to false, it returns the first operand.
 ### 16. Object.is() 与比较操作符 “===”、“==” 的区别？
 
 - 使用双等号（==）进行相等判断时，如果两边的类型不一致，则会进行强制类型转化后再进行比较。
 - 使用三等号（===）进行相等判断时，如果两边的类型不一致时，不会做强制类型准换，直接返回 false。
 - 使用 Object.is 来进行相等判断时，一般情况下和三等号的判断相同，它处理了一些特殊的情况，比如 -0 和 +0 不再相等，两个 NaN 是相等的。
 
+### 16. What's the difference between Object.is() and comparision operation "===", "=="
+- When performing an equality comparison using the double equals operator (==), if the types of the values on both sides are not the same, a type coercion (forced type conversion) will occur before the comparison is made.
+- When performing an equality comparison using the triple equals operator (===), if the types on both sides are not consistent, no type coercion (forced type conversion) will be performed, and false will be returned directly.
+- When using Object.is for equality comparison, it generally behaves the same as the triple equals operator (===), but it handles some special cases differently. For example, -0 and +0 are not considered equal, while two NaN values are considered equal.
+
+```javascript
+function OBJECTIS(A, B) {
+  // NaN
+  if(A!=A && B!=B) return true
+  if(typeof A !== typeof B) return false
+  return 1/A === 1/B
+}
+```
 ### 17. 什么是 JavaScript 中的包装类型？
 
 在 JavaScript 中，基本类型是没有属性和方法的，但是为了便于操作基本类型的值，在调用基本类型的属性或方法时 JavaScript 会在后台隐式地将基本类型的值转换为对象，如：
@@ -478,7 +529,8 @@ if (!a) {
 ```
 
 答案是什么都不会打印，因为虽然包裹的基本类型是`false`，但是`false`被包裹成包装类型后就成了对象，所以其非值为`false`，所以循环体中的内容不会运行。
-
+### 17. What are wrapper types in JavaScript?
+In javascript, the primitive types don't have properties and methods, but for to operate primitive value conveniently, javascript implicitly convert the values of primitive types to Objects in th background when call the properties and methods of the primitive types.
 ### 18. JavaScript 中如何进行隐式类型转换？
 
 首先要介绍`ToPrimitive`方法，这是 JavaScript 中每个值隐含的自带的方法，用来将值 （无论是基本类型值还是对象）转换为基本类型值。如果值为基本类型，则直接返回值本身；如果值为对象，其看起来大概是这样：
@@ -605,6 +657,7 @@ b.valueOf() // 同理
 b.toString() // "[object Object]"
 a + b // "[object Object][object Object]"
 ```
+### 18. How does implicit type conversion in Javascript?
 
 ### 19. `+` 操作符什么时候用于字符串的拼接？
 
@@ -615,11 +668,11 @@ a + b // "[object Object][object Object]"
 
 
 那么对于除了加法的运算符来说，只要其中一方是数字，那么另一方就会被转为数字。
-
+### 19. When is the '+' operator used for string concatenation?
 ### 20. 为什么会有**BigInt**的提案？ 
 
 JavaScript中Number.MAX_SAFE_INTEGER表示最⼤安全数字，计算结果是9007199254740991，即在这个数范围内不会出现精度丢失（⼩数除外）。但是⼀旦超过这个范围，js就会出现计算不准确的情况，这在⼤数计算的时候不得不依靠⼀些第三⽅库进⾏解决，因此官⽅提出了BigInt来解决此问题。 
-
+### 20. 
 ### 21. object.assign和扩展运算法是深拷贝还是浅拷贝，两者区别
 
 扩展运算符：
@@ -648,12 +701,12 @@ console.log(outObj) // {inObj: {a: 2, b: 2}}
 
 - Object.assign()方法接收的第一个参数作为目标对象，后面的所有参数作为源对象。然后把所有的源对象合并到目标对象中。它会修改了一个对象，因此会触发 ES6 setter。
 - 扩展操作符（…）使用它时，数组或对象中的每一个值都会被拷贝到一个新的数组或对象中。它不复制继承的属性或类的属性，但是它会复制ES6的 symbols 属性。
-
+### 21.
 ## 二、ES6
 
 ### 1. let、const、var的区别
-
-**（1）块级作用域：** 块作用域由 `{ }`包括，let和const具有块级作用域，var不存在块级作用域。块级作用域解决了ES5中的两个问题：
+域由 `{ }`包括，let和const具有块级作用域，var不存在块级作用域。块级作用域解决了ES5中的两个问题：
+**（1）块级作用域：** 块作用
 
 - 内层变量可能覆盖外层变量
 - 用来计数的循环变量泄露为全局变量
