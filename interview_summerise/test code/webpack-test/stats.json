@@ -1,0 +1,3120 @@
+{
+  "hash":"fc688706770cce76143a",
+  "version":"5.89.0",
+  "time":1753,
+  "builtAt":1707210530677,
+  "publicPath":"auto",
+  "outputPath":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\dist",
+  "assetsByChunkName":{
+      "main":[
+          "main_f11c47b4.css",
+          "main.de8b624b.js"
+      ],
+      "pro":[
+          "pro.c7aef983.js"
+      ]
+  },
+  "assets":[
+      {
+          "type":"asset",
+          "name":"main.de8b624b.js",
+          "size":5565,
+          "emitted":true,
+          "comparedForEmit":false,
+          "cached":false,
+          "info":{
+              "immutable":true,
+              "contenthash":"de8b624b",
+              "javascriptModule":false,
+              "size":5565
+          },
+          "chunkNames":[
+              "main"
+          ],
+          "chunkIdHints":[
+
+          ],
+          "auxiliaryChunkNames":[
+
+          ],
+          "auxiliaryChunkIdHints":[
+
+          ],
+          "related":{
+
+          },
+          "chunks":[
+              "main"
+          ],
+          "auxiliaryChunks":[
+
+          ],
+          "isOverSizeLimit":false
+      },
+      {
+          "type":"asset",
+          "name":"pro.c7aef983.js",
+          "size":2432,
+          "emitted":false,
+          "comparedForEmit":false,
+          "cached":true,
+          "info":{
+              "immutable":true,
+              "contenthash":"c7aef983",
+              "javascriptModule":false,
+              "size":2432
+          },
+          "chunkNames":[
+              "pro"
+          ],
+          "chunkIdHints":[
+
+          ],
+          "auxiliaryChunkNames":[
+
+          ],
+          "auxiliaryChunkIdHints":[
+
+          ],
+          "related":{
+
+          },
+          "chunks":[
+              "pro"
+          ],
+          "auxiliaryChunks":[
+
+          ],
+          "isOverSizeLimit":false
+      },
+      {
+          "type":"asset",
+          "name":"index.html",
+          "size":398,
+          "emitted":true,
+          "comparedForEmit":true,
+          "cached":false,
+          "info":{
+              "size":398
+          },
+          "chunkNames":[
+
+          ],
+          "chunkIdHints":[
+
+          ],
+          "auxiliaryChunkNames":[
+
+          ],
+          "auxiliaryChunkIdHints":[
+
+          ],
+          "related":{
+
+          },
+          "chunks":[
+
+          ],
+          "auxiliaryChunks":[
+
+          ],
+          "isOverSizeLimit":false
+      },
+      {
+          "type":"asset",
+          "name":"main_f11c47b4.css",
+          "size":333,
+          "emitted":false,
+          "comparedForEmit":false,
+          "cached":true,
+          "info":{
+              "immutable":true,
+              "contenthash":"f11c47b4",
+              "minimized":true,
+              "size":333
+          },
+          "chunkNames":[
+              "main"
+          ],
+          "chunkIdHints":[
+
+          ],
+          "auxiliaryChunkNames":[
+
+          ],
+          "auxiliaryChunkIdHints":[
+
+          ],
+          "related":{
+
+          },
+          "chunks":[
+              "main"
+          ],
+          "auxiliaryChunks":[
+
+          ],
+          "isOverSizeLimit":false
+      }
+  ],
+  "chunks":[
+      {
+          "rendered":true,
+          "initial":true,
+          "entry":true,
+          "recorded":false,
+          "size":1763,
+          "sizes":{
+              "javascript":1020,
+              "css/mini-extract":73,
+              "runtime":670
+          },
+          "names":[
+              "main"
+          ],
+          "idHints":[
+
+          ],
+          "runtime":[
+              "main"
+          ],
+          "files":[
+              "main_f11c47b4.css",
+              "main.de8b624b.js"
+          ],
+          "auxiliaryFiles":[
+
+          ],
+          "hash":"9340dd9ee3c24052462b",
+          "childrenByOrder":{
+
+          },
+          "id":"main",
+          "siblings":[
+
+          ],
+          "parents":[
+
+          ],
+          "children":[
+
+          ],
+          "modules":[
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":87,
+                  "sizes":{
+                      "javascript":87
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "index":1,
+                  "preOrderIndex":1,
+                  "index2":1,
+                  "postOrderIndex":1,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":true,
+                  "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "issuerName":"./index.js",
+                  "issuerPath":[
+                      {
+                          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "name":"./index.js",
+                          "profile":{
+                              "total":36,
+                              "resolving":26,
+                              "restoring":0,
+                              "building":10,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":26,
+                              "dependencies":0
+                          },
+                          "id":"./index.js"
+                      }
+                  ],
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":330,
+                      "resolving":32,
+                      "restoring":0,
+                      "building":298,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":32,
+                      "dependencies":0
+                  },
+                  "id":"./index.css",
+                  "issuerId":"./index.js",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "module":"./index.js",
+                          "moduleName":"./index.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "resolvedModule":"./index.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./index.css",
+                          "loc":"1:0-22",
+                          "moduleId":"./index.js",
+                          "resolvedModuleId":"./index.js"
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+                      "app",
+                      "ppp"
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":1
+              },
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":293,
+                  "sizes":{
+                      "javascript":293
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "index":0,
+                  "preOrderIndex":0,
+                  "index2":4,
+                  "postOrderIndex":4,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":false,
+                  "issuer":null,
+                  "issuerName":null,
+                  "issuerPath":null,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js",
+                  "issuerId":null,
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":"entry",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "loc":"main",
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":0
+              },
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":291,
+                  "sizes":{
+                      "javascript":291
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "name":"./show.js",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "index":4,
+                  "preOrderIndex":4,
+                  "index2":2,
+                  "postOrderIndex":2,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":true,
+                  "issuer":null,
+                  "issuerName":null,
+                  "issuerPath":null,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":0,
+                      "resolving":0,
+                      "restoring":0,
+                      "building":0,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":0,
+                      "dependencies":0
+                  },
+                  "id":"./show.js",
+                  "issuerId":null,
+                  "chunks":[
+                      "main",
+                      "pro"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "module":"./index.js",
+                          "moduleName":"./index.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "resolvedModule":"./index.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./show.js",
+                          "loc":"4:26-46",
+                          "moduleId":"./index.js",
+                          "resolvedModuleId":"./index.js"
+                      },
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "module":"./show.js",
+                          "moduleName":"./show.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "resolvedModule":"./show.js",
+                          "type":"cjs self exports reference",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":null,
+                          "loc":"9:0-14",
+                          "moduleId":"./show.js",
+                          "resolvedModuleId":"./show.js"
+                      },
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                          "module":"./show1.js",
+                          "moduleName":"./show1.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                          "resolvedModule":"./show1.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./show.js",
+                          "loc":"1:26-46",
+                          "moduleId":"./show1.js",
+                          "resolvedModuleId":"./show1.js"
+                      },
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":"entry",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "loc":"pro",
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+                      "CommonJS bailout: module.exports is used directly at 9:0-14"
+                  ],
+                  "depth":0
+              },
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":349,
+                  "sizes":{
+                      "javascript":349
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                  "name":"./show1.js",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                  "index":3,
+                  "preOrderIndex":3,
+                  "index2":3,
+                  "postOrderIndex":3,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":true,
+                  "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "issuerName":"./index.js",
+                  "issuerPath":[
+                      {
+                          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "name":"./index.js",
+                          "profile":{
+                              "total":36,
+                              "resolving":26,
+                              "restoring":0,
+                              "building":10,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":26,
+                              "dependencies":0
+                          },
+                          "id":"./index.js"
+                      }
+                  ],
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":26,
+                      "resolving":2,
+                      "restoring":0,
+                      "building":24,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":2,
+                      "dependencies":0
+                  },
+                  "id":"./show1.js",
+                  "issuerId":"./index.js",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "module":"./index.js",
+                          "moduleName":"./index.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "resolvedModule":"./index.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./show1.js",
+                          "loc":"2:0-21",
+                          "moduleId":"./index.js",
+                          "resolvedModuleId":"./index.js"
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":1
+              },
+              {
+                  "type":"module",
+                  "moduleType":"css/mini-extract",
+                  "size":73,
+                  "sizes":{
+                      "css/mini-extract":73
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"css|C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css|0|||}}",
+                  "name":"css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "index":2,
+                  "preOrderIndex":2,
+                  "index2":0,
+                  "postOrderIndex":0,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":true,
+                  "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "issuerName":"./index.css",
+                  "issuerPath":[
+                      {
+                          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "name":"./index.js",
+                          "profile":{
+                              "total":36,
+                              "resolving":26,
+                              "restoring":0,
+                              "building":10,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":26,
+                              "dependencies":0
+                          },
+                          "id":"./index.js"
+                      },
+                      {
+                          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                          "name":"./index.css",
+                          "profile":{
+                              "total":330,
+                              "resolving":32,
+                              "restoring":0,
+                              "building":298,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":32,
+                              "dependencies":0
+                          },
+                          "id":"./index.css"
+                      }
+                  ],
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":0,
+                      "resolving":0,
+                      "restoring":0,
+                      "building":0,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":0,
+                      "dependencies":0
+                  },
+                  "id":null,
+                  "issuerId":"./index.css",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                          "module":"./index.css",
+                          "moduleName":"./index.css",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                          "resolvedModule":"./index.css",
+                          "type":"unknown",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":null,
+                          "moduleId":"./index.css",
+                          "resolvedModuleId":"./index.css"
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":2
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":308,
+                  "sizes":{
+                      "runtime":308
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/define property getters",
+                  "name":"webpack/runtime/define property getters",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":88,
+                  "sizes":{
+                      "runtime":88
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/hasOwnProperty shorthand",
+                  "name":"webpack/runtime/hasOwnProperty shorthand",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":274,
+                  "sizes":{
+                      "runtime":274
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/make namespace object",
+                  "name":"webpack/runtime/make namespace object",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "main"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              }
+          ],
+          "origins":[
+              {
+                  "module":"",
+                  "moduleIdentifier":"",
+                  "moduleName":"",
+                  "loc":"main",
+                  "request":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js"
+              }
+          ]
+      },
+      {
+          "rendered":true,
+          "initial":true,
+          "entry":true,
+          "recorded":false,
+          "size":291,
+          "sizes":{
+              "javascript":291
+          },
+          "names":[
+              "pro"
+          ],
+          "idHints":[
+
+          ],
+          "runtime":[
+              "pro"
+          ],
+          "files":[
+              "pro.c7aef983.js"
+          ],
+          "auxiliaryFiles":[
+
+          ],
+          "hash":"3c0ebe69ec678cbff4aa",
+          "childrenByOrder":{
+
+          },
+          "id":"pro",
+          "siblings":[
+
+          ],
+          "parents":[
+
+          ],
+          "children":[
+
+          ],
+          "modules":[
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":291,
+                  "sizes":{
+                      "javascript":291
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "name":"./show.js",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "index":4,
+                  "preOrderIndex":4,
+                  "index2":2,
+                  "postOrderIndex":2,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "dependent":false,
+                  "issuer":null,
+                  "issuerName":null,
+                  "issuerPath":null,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":0,
+                      "resolving":0,
+                      "restoring":0,
+                      "building":0,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":0,
+                      "dependencies":0
+                  },
+                  "id":"./show.js",
+                  "issuerId":null,
+                  "chunks":[
+                      "main",
+                      "pro"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "module":"./index.js",
+                          "moduleName":"./index.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                          "resolvedModule":"./index.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./show.js",
+                          "loc":"4:26-46",
+                          "moduleId":"./index.js",
+                          "resolvedModuleId":"./index.js"
+                      },
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "module":"./show.js",
+                          "moduleName":"./show.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "resolvedModule":"./show.js",
+                          "type":"cjs self exports reference",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":null,
+                          "loc":"9:0-14",
+                          "moduleId":"./show.js",
+                          "resolvedModuleId":"./show.js"
+                      },
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                          "module":"./show1.js",
+                          "moduleName":"./show1.js",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                          "resolvedModule":"./show1.js",
+                          "type":"cjs require",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"./show.js",
+                          "loc":"1:26-46",
+                          "moduleId":"./show1.js",
+                          "resolvedModuleId":"./show1.js"
+                      },
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":"entry",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                          "loc":"pro",
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+                      "CommonJS bailout: module.exports is used directly at 9:0-14"
+                  ],
+                  "depth":0
+              }
+          ],
+          "origins":[
+              {
+                  "module":"",
+                  "moduleIdentifier":"",
+                  "moduleName":"",
+                  "loc":"pro",
+                  "request":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js"
+              }
+          ]
+      }
+  ],
+  "modules":[
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":293,
+          "sizes":{
+              "javascript":293
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+          "name":"./index.js",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+          "index":0,
+          "preOrderIndex":0,
+          "index2":4,
+          "postOrderIndex":4,
+          "cacheable":true,
+          "optional":false,
+          "orphan":false,
+          "issuer":null,
+          "issuerName":null,
+          "issuerPath":null,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":36,
+              "resolving":26,
+              "restoring":0,
+              "building":10,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":26,
+              "dependencies":0
+          },
+          "id":"./index.js",
+          "issuerId":null,
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":null,
+                  "module":null,
+                  "moduleName":null,
+                  "resolvedModuleIdentifier":null,
+                  "resolvedModule":null,
+                  "type":"entry",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "loc":"main",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":0
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":291,
+          "sizes":{
+              "javascript":291
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+          "name":"./show.js",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+          "index":4,
+          "preOrderIndex":4,
+          "index2":2,
+          "postOrderIndex":2,
+          "cacheable":true,
+          "optional":false,
+          "orphan":false,
+          "issuer":null,
+          "issuerName":null,
+          "issuerPath":null,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":0,
+              "resolving":0,
+              "restoring":0,
+              "building":0,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":0,
+              "dependencies":0
+          },
+          "id":"./show.js",
+          "issuerId":null,
+          "chunks":[
+              "main",
+              "pro"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "module":"./index.js",
+                  "moduleName":"./index.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "resolvedModule":"./index.js",
+                  "type":"cjs require",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./show.js",
+                  "loc":"4:26-46",
+                  "moduleId":"./index.js",
+                  "resolvedModuleId":"./index.js"
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "module":"./show.js",
+                  "moduleName":"./show.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "resolvedModule":"./show.js",
+                  "type":"cjs self exports reference",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":null,
+                  "loc":"9:0-14",
+                  "moduleId":"./show.js",
+                  "resolvedModuleId":"./show.js"
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                  "module":"./show1.js",
+                  "moduleName":"./show1.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+                  "resolvedModule":"./show1.js",
+                  "type":"cjs require",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./show.js",
+                  "loc":"1:26-46",
+                  "moduleId":"./show1.js",
+                  "resolvedModuleId":"./show1.js"
+              },
+              {
+                  "moduleIdentifier":null,
+                  "module":null,
+                  "moduleName":null,
+                  "resolvedModuleIdentifier":null,
+                  "resolvedModule":null,
+                  "type":"entry",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show.js",
+                  "loc":"pro",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+              "CommonJS bailout: module.exports is used directly at 9:0-14"
+          ],
+          "depth":0
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":87,
+          "sizes":{
+              "javascript":87
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "name":"./index.css",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "index":1,
+          "preOrderIndex":1,
+          "index2":1,
+          "postOrderIndex":1,
+          "cacheable":true,
+          "optional":false,
+          "orphan":false,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+          "issuerName":"./index.js",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":330,
+              "resolving":32,
+              "restoring":0,
+              "building":298,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":32,
+              "dependencies":0
+          },
+          "id":"./index.css",
+          "issuerId":"./index.js",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "module":"./index.js",
+                  "moduleName":"./index.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "resolvedModule":"./index.js",
+                  "type":"cjs require",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./index.css",
+                  "loc":"1:0-22",
+                  "moduleId":"./index.js",
+                  "resolvedModuleId":"./index.js"
+              }
+          ],
+          "usedExports":null,
+          "providedExports":[
+              "app",
+              "ppp"
+          ],
+          "optimizationBailout":[
+
+          ],
+          "depth":1
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":349,
+          "sizes":{
+              "javascript":349
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+          "name":"./show1.js",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\show1.js",
+          "index":3,
+          "preOrderIndex":3,
+          "index2":3,
+          "postOrderIndex":3,
+          "cacheable":true,
+          "optional":false,
+          "orphan":false,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+          "issuerName":"./index.js",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":26,
+              "resolving":2,
+              "restoring":0,
+              "building":24,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":2,
+              "dependencies":0
+          },
+          "id":"./show1.js",
+          "issuerId":"./index.js",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "module":"./index.js",
+                  "moduleName":"./index.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "resolvedModule":"./index.js",
+                  "type":"cjs require",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./show1.js",
+                  "loc":"2:0-21",
+                  "moduleId":"./index.js",
+                  "resolvedModuleId":"./index.js"
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":1
+      },
+      {
+          "type":"module",
+          "moduleType":"css/mini-extract",
+          "size":73,
+          "sizes":{
+              "css/mini-extract":73
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"css|C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css|0|||}}",
+          "name":"css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "index":2,
+          "preOrderIndex":2,
+          "index2":0,
+          "postOrderIndex":0,
+          "cacheable":true,
+          "optional":false,
+          "orphan":false,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "issuerName":"./index.css",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css",
+                  "profile":{
+                      "total":330,
+                      "resolving":32,
+                      "restoring":0,
+                      "building":298,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":32,
+                      "dependencies":0
+                  },
+                  "id":"./index.css"
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":0,
+              "resolving":0,
+              "restoring":0,
+              "building":0,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":0,
+              "dependencies":0
+          },
+          "id":null,
+          "issuerId":"./index.css",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "module":"./index.css",
+                  "moduleName":"./index.css",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "resolvedModule":"./index.css",
+                  "type":"unknown",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":null,
+                  "moduleId":"./index.css",
+                  "resolvedModuleId":"./index.css"
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":2
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":550,
+          "sizes":{
+              "javascript":550
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "name":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "cacheable":true,
+          "optional":false,
+          "orphan":true,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "issuerName":"./index.css",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css",
+                  "profile":{
+                      "total":330,
+                      "resolving":32,
+                      "restoring":0,
+                      "building":298,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":32,
+                      "dependencies":0
+                  },
+                  "id":"./index.css"
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":176,
+              "resolving":2,
+              "restoring":0,
+              "building":174,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":2,
+              "dependencies":0
+          },
+          "id":null,
+          "issuerId":"./index.css",
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":null,
+                  "module":null,
+                  "moduleName":null,
+                  "resolvedModuleIdentifier":null,
+                  "resolvedModule":null,
+                  "type":"loader import",
+                  "active":false,
+                  "explanation":"",
+                  "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css.webpack[javascript/auto]!=!!!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "loc":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css.webpack[javascript/auto]!=!!!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              }
+          ],
+          "usedExports":null,
+          "providedExports":[
+              "app",
+              "default",
+              "ppp"
+          ],
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":2303,
+          "sizes":{
+              "javascript":2303
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "name":"./node_modules/css-loader/dist/runtime/api.js",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "cacheable":true,
+          "optional":false,
+          "orphan":true,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "issuerName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css",
+                  "profile":{
+                      "total":330,
+                      "resolving":32,
+                      "restoring":0,
+                      "building":298,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":32,
+                      "dependencies":0
+                  },
+                  "id":"./index.css"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "profile":{
+                      "total":176,
+                      "resolving":2,
+                      "restoring":0,
+                      "building":174,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":2,
+                      "dependencies":0
+                  },
+                  "id":null
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":0,
+              "resolving":0,
+              "restoring":0,
+              "building":0,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":0,
+              "dependencies":0
+          },
+          "id":null,
+          "issuerId":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "module":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "moduleName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "resolvedModule":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "type":"harmony side effect evaluation",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./node_modules/css-loader/dist/runtime/api.js",
+                  "loc":"3:0-88",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "module":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "moduleName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "resolvedModule":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "type":"harmony import specifier",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./node_modules/css-loader/dist/runtime/api.js",
+                  "loc":"4:30-57",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\api.js",
+                  "module":"./node_modules/css-loader/dist/runtime/api.js",
+                  "moduleName":"./node_modules/css-loader/dist/runtime/api.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\api.js",
+                  "resolvedModule":"./node_modules/css-loader/dist/runtime/api.js",
+                  "type":"cjs self exports reference",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":null,
+                  "loc":"7:0-14",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+              "CommonJS bailout: module.exports is used directly at 7:0-14"
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"javascript/auto",
+          "layer":null,
+          "size":64,
+          "sizes":{
+              "javascript":64
+          },
+          "built":true,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\noSourceMaps.js",
+          "name":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\noSourceMaps.js",
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "cacheable":true,
+          "optional":false,
+          "orphan":true,
+          "issuer":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+          "issuerName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+          "issuerPath":[
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.js",
+                  "name":"./index.js",
+                  "profile":{
+                      "total":36,
+                      "resolving":26,
+                      "restoring":0,
+                      "building":10,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":26,
+                      "dependencies":0
+                  },
+                  "id":"./index.js"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ruleSet[1].rules[0].use[0]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css",
+                  "profile":{
+                      "total":330,
+                      "resolving":32,
+                      "restoring":0,
+                      "building":298,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":32,
+                      "dependencies":0
+                  },
+                  "id":"./index.css"
+              },
+              {
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "name":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "profile":{
+                      "total":176,
+                      "resolving":2,
+                      "restoring":0,
+                      "building":174,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":2,
+                      "dependencies":0
+                  },
+                  "id":null
+              }
+          ],
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "profile":{
+              "total":0,
+              "resolving":0,
+              "restoring":0,
+              "building":0,
+              "integration":0,
+              "storing":0,
+              "additionalResolving":0,
+              "additionalIntegration":0,
+              "factory":0,
+              "dependencies":0
+          },
+          "id":null,
+          "issuerId":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "module":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "moduleName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "resolvedModule":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "type":"harmony side effect evaluation",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+                  "loc":"2:0-110",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "module":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "moduleName":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.css",
+                  "resolvedModule":"./index.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./index.css",
+                  "type":"harmony import specifier",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+                  "loc":"4:58-98",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              },
+              {
+                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\noSourceMaps.js",
+                  "module":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+                  "moduleName":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\css-loader\\dist\\runtime\\noSourceMaps.js",
+                  "resolvedModule":"./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+                  "type":"cjs self exports reference",
+                  "active":true,
+                  "explanation":"",
+                  "userRequest":null,
+                  "loc":"3:0-14",
+                  "moduleId":null,
+                  "resolvedModuleId":null
+              }
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+              "CommonJS bailout: module.exports is used directly at 3:0-14"
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":267,
+          "sizes":{
+              "runtime":267
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"webpack/runtime/compat get default export",
+          "name":"webpack/runtime/compat get default export",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":true,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":308,
+          "sizes":{
+              "runtime":308
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"webpack/runtime/define property getters",
+          "name":"webpack/runtime/define property getters",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":true,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":308,
+          "sizes":{
+              "runtime":308
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"webpack/runtime/define property getters",
+          "name":"webpack/runtime/define property getters",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":false,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":"",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":[
+
+          ],
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":88,
+          "sizes":{
+              "runtime":88
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"webpack/runtime/hasOwnProperty shorthand",
+          "name":"webpack/runtime/hasOwnProperty shorthand",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":true,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":88,
+          "sizes":{
+              "runtime":88
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"webpack/runtime/hasOwnProperty shorthand",
+          "name":"webpack/runtime/hasOwnProperty shorthand",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":false,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":"",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":[
+
+          ],
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":274,
+          "sizes":{
+              "runtime":274
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":true,
+          "cached":false,
+          "identifier":"webpack/runtime/make namespace object",
+          "name":"webpack/runtime/make namespace object",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":true,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":null,
+          "chunks":[
+
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":null,
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      },
+      {
+          "type":"module",
+          "moduleType":"runtime",
+          "layer":null,
+          "size":274,
+          "sizes":{
+              "runtime":274
+          },
+          "built":false,
+          "codeGenerated":true,
+          "buildTimeExecuted":false,
+          "cached":false,
+          "identifier":"webpack/runtime/make namespace object",
+          "name":"webpack/runtime/make namespace object",
+          "nameForCondition":null,
+          "index":null,
+          "preOrderIndex":null,
+          "index2":null,
+          "postOrderIndex":null,
+          "optional":false,
+          "orphan":false,
+          "failed":false,
+          "errors":0,
+          "warnings":0,
+          "id":"",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+
+          ],
+          "reasons":[
+
+          ],
+          "usedExports":null,
+          "providedExports":[
+
+          ],
+          "optimizationBailout":[
+
+          ],
+          "depth":null
+      }
+  ],
+  "entrypoints":{
+      "main":{
+          "name":"main",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+              {
+                  "name":"main_f11c47b4.css",
+                  "size":333
+              },
+              {
+                  "name":"main.de8b624b.js",
+                  "size":5565
+              }
+          ],
+          "filteredAssets":0,
+          "assetsSize":5898,
+          "auxiliaryAssets":[
+
+          ],
+          "filteredAuxiliaryAssets":0,
+          "auxiliaryAssetsSize":0,
+          "children":{
+
+          },
+          "childAssets":{
+
+          },
+          "isOverSizeLimit":false
+      },
+      "pro":{
+          "name":"pro",
+          "chunks":[
+              "pro"
+          ],
+          "assets":[
+              {
+                  "name":"pro.c7aef983.js",
+                  "size":2432
+              }
+          ],
+          "filteredAssets":0,
+          "assetsSize":2432,
+          "auxiliaryAssets":[
+
+          ],
+          "filteredAuxiliaryAssets":0,
+          "auxiliaryAssetsSize":0,
+          "children":{
+
+          },
+          "childAssets":{
+
+          },
+          "isOverSizeLimit":false
+      }
+  },
+  "namedChunkGroups":{
+      "main":{
+          "name":"main",
+          "chunks":[
+              "main"
+          ],
+          "assets":[
+              {
+                  "name":"main_f11c47b4.css",
+                  "size":333
+              },
+              {
+                  "name":"main.de8b624b.js",
+                  "size":5565
+              }
+          ],
+          "filteredAssets":0,
+          "assetsSize":5898,
+          "auxiliaryAssets":[
+
+          ],
+          "filteredAuxiliaryAssets":0,
+          "auxiliaryAssetsSize":0,
+          "children":{
+
+          },
+          "childAssets":{
+
+          },
+          "isOverSizeLimit":false
+      },
+      "pro":{
+          "name":"pro",
+          "chunks":[
+              "pro"
+          ],
+          "assets":[
+              {
+                  "name":"pro.c7aef983.js",
+                  "size":2432
+              }
+          ],
+          "filteredAssets":0,
+          "assetsSize":2432,
+          "auxiliaryAssets":[
+
+          ],
+          "filteredAuxiliaryAssets":0,
+          "auxiliaryAssetsSize":0,
+          "children":{
+
+          },
+          "childAssets":{
+
+          },
+          "isOverSizeLimit":false
+      }
+  },
+  "errors":[
+
+  ],
+  "errorsCount":0,
+  "warnings":[
+
+  ],
+  "warningsCount":0,
+  "children":[
+      {
+          "name":"HtmlWebpackCompiler",
+          "hash":"5246b5828a974b437d15",
+          "version":"5.89.0",
+          "time":66,
+          "builtAt":1707210529019,
+          "publicPath":"",
+          "outputPath":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\dist",
+          "assetsByChunkName":{
+
+          },
+          "assets":[
+
+          ],
+          "chunks":[
+              {
+                  "rendered":true,
+                  "initial":true,
+                  "entry":true,
+                  "recorded":false,
+                  "size":1382,
+                  "sizes":{
+                      "javascript":648,
+                      "runtime":734
+                  },
+                  "names":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "idHints":[
+
+                  ],
+                  "runtime":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "files":[
+
+                  ],
+                  "auxiliaryFiles":[
+
+                  ],
+                  "hash":"021f2e5307226c657090",
+                  "childrenByOrder":{
+
+                  },
+                  "id":"HtmlWebpackPlugin_0-0",
+                  "siblings":[
+
+                  ],
+                  "parents":[
+
+                  ],
+                  "children":[
+
+                  ],
+                  "modules":[
+                      {
+                          "type":"module",
+                          "moduleType":"javascript/auto",
+                          "layer":null,
+                          "size":571,
+                          "sizes":{
+                              "javascript":571
+                          },
+                          "built":true,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                          "name":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                          "index":1,
+                          "preOrderIndex":1,
+                          "index2":1,
+                          "postOrderIndex":1,
+                          "cacheable":true,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "issuer":null,
+                          "issuerName":null,
+                          "issuerPath":null,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "profile":{
+                              "total":0,
+                              "resolving":0,
+                              "restoring":0,
+                              "building":0,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":0,
+                              "dependencies":0
+                          },
+                          "id":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "issuerId":null,
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+                              {
+                                  "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                                  "module":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                                  "moduleName":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                                  "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                                  "resolvedModule":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                                  "type":"cjs self exports reference",
+                                  "active":true,
+                                  "explanation":"",
+                                  "userRequest":null,
+                                  "loc":"1:138-152",
+                                  "moduleId":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                                  "resolvedModuleId":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html"
+                              },
+                              {
+                                  "moduleIdentifier":null,
+                                  "module":null,
+                                  "moduleName":null,
+                                  "resolvedModuleIdentifier":null,
+                                  "resolvedModule":null,
+                                  "type":"entry",
+                                  "active":true,
+                                  "explanation":"",
+                                  "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                                  "loc":"HtmlWebpackPlugin_0-0",
+                                  "moduleId":null,
+                                  "resolvedModuleId":null
+                              },
+                              {
+                                  "moduleIdentifier":null,
+                                  "module":null,
+                                  "moduleName":null,
+                                  "resolvedModuleIdentifier":null,
+                                  "resolvedModule":null,
+                                  "type":null,
+                                  "active":true,
+                                  "explanation":"used as library export",
+                                  "userRequest":null,
+                                  "moduleId":null,
+                                  "resolvedModuleId":null
+                              }
+                          ],
+                          "usedExports":null,
+                          "providedExports":null,
+                          "optimizationBailout":[
+                              "CommonJS bailout: module.exports is used directly at 1:138-152"
+                          ],
+                          "depth":0
+                      },
+                      {
+                          "type":"module",
+                          "moduleType":"javascript/esm",
+                          "layer":null,
+                          "size":77,
+                          "sizes":{
+                              "javascript":77
+                          },
+                          "built":true,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                          "name":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                          "nameForCondition":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                          "index":0,
+                          "preOrderIndex":0,
+                          "index2":0,
+                          "postOrderIndex":0,
+                          "cacheable":true,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "issuer":null,
+                          "issuerName":null,
+                          "issuerPath":null,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "profile":{
+                              "total":10,
+                              "resolving":4,
+                              "restoring":0,
+                              "building":6,
+                              "integration":0,
+                              "storing":0,
+                              "additionalResolving":0,
+                              "additionalIntegration":0,
+                              "factory":4,
+                              "dependencies":0
+                          },
+                          "id":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                          "issuerId":null,
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+                              {
+                                  "moduleIdentifier":null,
+                                  "module":null,
+                                  "moduleName":null,
+                                  "resolvedModuleIdentifier":null,
+                                  "resolvedModule":null,
+                                  "type":"entry",
+                                  "active":true,
+                                  "explanation":"",
+                                  "userRequest":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                                  "loc":"HtmlWebpackPlugin_0-0",
+                                  "moduleId":null,
+                                  "resolvedModuleId":null
+                              }
+                          ],
+                          "usedExports":null,
+                          "providedExports":[
+
+                          ],
+                          "optimizationBailout":[
+
+                          ],
+                          "depth":0
+                      },
+                      {
+                          "type":"module",
+                          "moduleType":"runtime",
+                          "layer":null,
+                          "size":88,
+                          "sizes":{
+                              "runtime":88
+                          },
+                          "built":false,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"webpack/runtime/hasOwnProperty shorthand",
+                          "name":"webpack/runtime/hasOwnProperty shorthand",
+                          "nameForCondition":null,
+                          "index":null,
+                          "preOrderIndex":null,
+                          "index2":null,
+                          "postOrderIndex":null,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "id":"",
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+
+                          ],
+                          "usedExports":null,
+                          "providedExports":[
+
+                          ],
+                          "optimizationBailout":[
+
+                          ],
+                          "depth":null
+                      },
+                      {
+                          "type":"module",
+                          "moduleType":"runtime",
+                          "layer":null,
+                          "size":274,
+                          "sizes":{
+                              "runtime":274
+                          },
+                          "built":false,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"webpack/runtime/make namespace object",
+                          "name":"webpack/runtime/make namespace object",
+                          "nameForCondition":null,
+                          "index":null,
+                          "preOrderIndex":null,
+                          "index2":null,
+                          "postOrderIndex":null,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "id":"",
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+
+                          ],
+                          "usedExports":null,
+                          "providedExports":[
+
+                          ],
+                          "optimizationBailout":[
+
+                          ],
+                          "depth":null
+                      },
+                      {
+                          "type":"module",
+                          "moduleType":"runtime",
+                          "layer":null,
+                          "size":27,
+                          "sizes":{
+                              "runtime":27
+                          },
+                          "built":false,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"webpack/runtime/publicPath",
+                          "name":"webpack/runtime/publicPath",
+                          "nameForCondition":null,
+                          "index":null,
+                          "preOrderIndex":null,
+                          "index2":null,
+                          "postOrderIndex":null,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "id":"",
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+
+                          ],
+                          "usedExports":null,
+                          "providedExports":[
+
+                          ],
+                          "optimizationBailout":[
+
+                          ],
+                          "depth":null
+                      },
+                      {
+                          "type":"module",
+                          "moduleType":"runtime",
+                          "layer":null,
+                          "size":345,
+                          "sizes":{
+                              "runtime":345
+                          },
+                          "built":false,
+                          "codeGenerated":true,
+                          "buildTimeExecuted":false,
+                          "cached":false,
+                          "identifier":"webpack/runtime/require chunk loading",
+                          "name":"webpack/runtime/require chunk loading",
+                          "nameForCondition":null,
+                          "index":null,
+                          "preOrderIndex":null,
+                          "index2":null,
+                          "postOrderIndex":null,
+                          "optional":false,
+                          "orphan":false,
+                          "dependent":false,
+                          "failed":false,
+                          "errors":0,
+                          "warnings":0,
+                          "id":"",
+                          "chunks":[
+                              "HtmlWebpackPlugin_0-0"
+                          ],
+                          "assets":[
+
+                          ],
+                          "reasons":[
+
+                          ],
+                          "usedExports":null,
+                          "providedExports":[
+
+                          ],
+                          "optimizationBailout":[
+
+                          ],
+                          "depth":null
+                      }
+                  ],
+                  "origins":[
+                      {
+                          "module":"",
+                          "moduleIdentifier":"",
+                          "moduleName":"",
+                          "loc":"HtmlWebpackPlugin_0-0",
+                          "request":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html"
+                      },
+                      {
+                          "module":"",
+                          "moduleIdentifier":"",
+                          "moduleName":"",
+                          "loc":"HtmlWebpackPlugin_0-0",
+                          "request":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;"
+                      }
+                  ]
+              }
+          ],
+          "modules":[
+              {
+                  "type":"module",
+                  "moduleType":"javascript/esm",
+                  "layer":null,
+                  "size":77,
+                  "sizes":{
+                      "javascript":77
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                  "name":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                  "nameForCondition":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                  "index":0,
+                  "preOrderIndex":0,
+                  "index2":0,
+                  "postOrderIndex":0,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "issuer":null,
+                  "issuerName":null,
+                  "issuerPath":null,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":10,
+                      "resolving":4,
+                      "restoring":0,
+                      "building":6,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":4,
+                      "dependencies":0
+                  },
+                  "id":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                  "issuerId":null,
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":"entry",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                          "loc":"HtmlWebpackPlugin_0-0",
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":0
+              },
+              {
+                  "type":"module",
+                  "moduleType":"javascript/auto",
+                  "layer":null,
+                  "size":571,
+                  "sizes":{
+                      "javascript":571
+                  },
+                  "built":true,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                  "name":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                  "nameForCondition":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                  "index":1,
+                  "preOrderIndex":1,
+                  "index2":1,
+                  "postOrderIndex":1,
+                  "cacheable":true,
+                  "optional":false,
+                  "orphan":false,
+                  "issuer":null,
+                  "issuerName":null,
+                  "issuerPath":null,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "profile":{
+                      "total":0,
+                      "resolving":0,
+                      "restoring":0,
+                      "building":0,
+                      "integration":0,
+                      "storing":0,
+                      "additionalResolving":0,
+                      "additionalIntegration":0,
+                      "factory":0,
+                      "dependencies":0
+                  },
+                  "id":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                  "issuerId":null,
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+                      {
+                          "moduleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                          "module":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "moduleName":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "resolvedModuleIdentifier":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                          "resolvedModule":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "type":"cjs self exports reference",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":null,
+                          "loc":"1:138-152",
+                          "moduleId":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                          "resolvedModuleId":"./node_modules/html-webpack-plugin/lib/loader.js!./index.html"
+                      },
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":"entry",
+                          "active":true,
+                          "explanation":"",
+                          "userRequest":"C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\1\\Desktop\\one-year\\interview_summerise\\test code\\webpack-test\\index.html",
+                          "loc":"HtmlWebpackPlugin_0-0",
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      },
+                      {
+                          "moduleIdentifier":null,
+                          "module":null,
+                          "moduleName":null,
+                          "resolvedModuleIdentifier":null,
+                          "resolvedModule":null,
+                          "type":null,
+                          "active":true,
+                          "explanation":"used as library export",
+                          "userRequest":null,
+                          "moduleId":null,
+                          "resolvedModuleId":null
+                      }
+                  ],
+                  "usedExports":null,
+                  "providedExports":null,
+                  "optimizationBailout":[
+                      "CommonJS bailout: module.exports is used directly at 1:138-152"
+                  ],
+                  "depth":0
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":88,
+                  "sizes":{
+                      "runtime":88
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/hasOwnProperty shorthand",
+                  "name":"webpack/runtime/hasOwnProperty shorthand",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":274,
+                  "sizes":{
+                      "runtime":274
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/make namespace object",
+                  "name":"webpack/runtime/make namespace object",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":27,
+                  "sizes":{
+                      "runtime":27
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/publicPath",
+                  "name":"webpack/runtime/publicPath",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              },
+              {
+                  "type":"module",
+                  "moduleType":"runtime",
+                  "layer":null,
+                  "size":345,
+                  "sizes":{
+                      "runtime":345
+                  },
+                  "built":false,
+                  "codeGenerated":true,
+                  "buildTimeExecuted":false,
+                  "cached":false,
+                  "identifier":"webpack/runtime/require chunk loading",
+                  "name":"webpack/runtime/require chunk loading",
+                  "nameForCondition":null,
+                  "index":null,
+                  "preOrderIndex":null,
+                  "index2":null,
+                  "postOrderIndex":null,
+                  "optional":false,
+                  "orphan":false,
+                  "failed":false,
+                  "errors":0,
+                  "warnings":0,
+                  "id":"",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "reasons":[
+
+                  ],
+                  "usedExports":null,
+                  "providedExports":[
+
+                  ],
+                  "optimizationBailout":[
+
+                  ],
+                  "depth":null
+              }
+          ],
+          "entrypoints":{
+              "HtmlWebpackPlugin_0-0":{
+                  "name":"HtmlWebpackPlugin_0-0",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "filteredAssets":0,
+                  "assetsSize":0,
+                  "auxiliaryAssets":[
+
+                  ],
+                  "filteredAuxiliaryAssets":0,
+                  "auxiliaryAssetsSize":0,
+                  "children":{
+
+                  },
+                  "childAssets":{
+
+                  },
+                  "isOverSizeLimit":false
+              }
+          },
+          "namedChunkGroups":{
+              "HtmlWebpackPlugin_0-0":{
+                  "name":"HtmlWebpackPlugin_0-0",
+                  "chunks":[
+                      "HtmlWebpackPlugin_0-0"
+                  ],
+                  "assets":[
+
+                  ],
+                  "filteredAssets":0,
+                  "assetsSize":0,
+                  "auxiliaryAssets":[
+
+                  ],
+                  "filteredAuxiliaryAssets":0,
+                  "auxiliaryAssetsSize":0,
+                  "children":{
+
+                  },
+                  "childAssets":{
+
+                  },
+                  "isOverSizeLimit":false
+              }
+          },
+          "errors":[
+
+          ],
+          "errorsCount":0,
+          "warnings":[
+
+          ],
+          "warningsCount":0,
+          "children":[
+
+          ]
+      }
+  ]
+}

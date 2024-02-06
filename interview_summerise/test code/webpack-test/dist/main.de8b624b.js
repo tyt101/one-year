@@ -15,7 +15,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n__webpack_require__(/*! ./show1.js */ \"./show1.js\")\r\n// 通过 CommonJS 规范导入 show 函数\r\nconst {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\n// 执行 show 函数\r\nshow('Webpack');\r\nconsole.log(bianliang.aaa)\r\nbianliang.aaa= 100\r\nconsole.log(bianliang.aaa)\r\nconsole.log(\"=====\",12111)\n\n//# sourceURL=webpack://webpack-test/./index.js?");
+eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n__webpack_require__(/*! ./show1.js */ \"./show1.js\")\r\n// 通过 CommonJS 规范导入 show 函数\r\nconst {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\n// 执行 show 函数\r\nshow('Webpack');\r\nconsole.log(bianliang.aaa)\r\nbianliang.aaa= 100\r\nconsole.log(bianliang.aaa)\r\nconsole.log(\"=====binss\",bianliang)\n\n//# sourceURL=webpack://webpack-test/./index.js?");
 
 /***/ }),
 

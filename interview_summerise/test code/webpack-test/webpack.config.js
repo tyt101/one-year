@@ -2,8 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default
 module.exports = {
   target: 'web',
+  profile: true,
   entry: {
     main: path.resolve(__dirname,'./index.js'),
     pro: path.resolve(__dirname,'./show.js')
@@ -46,6 +48,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name]_[contenthash:8].css",
     }),
+    new StatoscopeWebpackPlugin()
   ],
   optimization: {
     // 生产环境下
