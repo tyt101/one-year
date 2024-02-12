@@ -15,7 +15,27 @@
   \******************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./index.css */ \"./index.css\")\r\n__webpack_require__(/*! ./show1.js */ \"./show1.js\")\r\n// 通过 CommonJS 规范导入 show 函数\r\nconst {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\n// 执行 show 函数\r\nshow('Webpack');\r\nconsole.log(bianliang.aaa)\r\nbianliang.aaa= 100\r\nconsole.log(bianliang.aaa)\r\nconsole.log(\"=====\",12111)\n\n//# sourceURL=webpack://webpack-test/./index.js?");
+eval("__webpack_require__(/*! ./index.css */ \"./index.css\");\n__webpack_require__(/*! ./show1.js */ \"./show1.js\");\n__webpack_require__(/*! ./aaa */ \"./aaa.ts\");\n// 通过 CommonJS 规范导入 show 函数\nvar _require = __webpack_require__(/*! ./show.js */ \"./show.js\"),\n  show = _require.show,\n  bianliang = _require.bianliang;\n// 执行 show 函数\nshow('Webpack');\nconsole.log(bianliang.aaa);\nbianliang.aaa = 100;\nconsole.log(bianliang.aaa);\nconsole.log('=====binss', bianliang);\nvar arr = [1, 2, 3, 4];\narr.map(function (item) {\n  console.log('==========', item);\n  return null;\n});\n\n//# sourceURL=webpack://webpack-test/./index.js?");
+
+/***/ }),
+
+/***/ "./show.js":
+/*!*****************!*\
+  !*** ./show.js ***!
+  \*****************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("__webpack_require__(/*! ./main.less */ \"./main.less\");\n// 操作 DOM 元素，把 content 显示到网页上\nfunction show(content) {\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\n}\nvar bianliang = {\n  aaa: 224\n};\n// 通过 CommonJS 规范导出 show 函数\nmodule.exports = {\n  show: show,\n  bianliang: bianliang\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+
+/***/ }),
+
+/***/ "./show1.js":
+/*!******************!*\
+  !*** ./show1.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// eslint-disable-next-line no-unused-vars\nvar _require = __webpack_require__(/*! ./show.js */ \"./show.js\"),\n  show = _require.show,\n  bianliang = _require.bianliang;\nconsole.log('bianliang:', bianliang);\nsetTimeout(function () {\n  console.log('bianlia121ng:', bianliang);\n}, 1000);\n\n/**\n * Common.js 是动态的加载语句，代码发生在运行时 （同步加载）\n * Common.js 导出的是值得浅拷贝， 值可修改，但是容易引起变量污染\n */\n\n//# sourceURL=webpack://webpack-test/./show1.js?");
 
 /***/ }),
 
@@ -30,23 +50,24 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./show.js":
-/*!*****************!*\
-  !*** ./show.js ***!
-  \*****************/
-/***/ ((module) => {
+/***/ "./main.less":
+/*!*******************!*\
+  !*** ./main.less ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 224\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-test/./main.less?");
 
 /***/ }),
 
-/***/ "./show1.js":
-/*!******************!*\
-  !*** ./show1.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./aaa.ts":
+/*!****************!*\
+  !*** ./aaa.ts ***!
+  \****************/
+/***/ (() => {
 
-eval("const {show, bianliang} = __webpack_require__(/*! ./show.js */ \"./show.js\");\r\nconsole.log('bianliang:',bianliang)\r\n\r\nsetTimeout(() => {\r\n  console.log('bianlia121ng:',bianliang)\r\n}, 1000);\r\n\r\n\r\n/**\r\n * Common.js 是动态的加载语句，代码发生在运行时 （同步加载）\r\n * Common.js 导出的是值得浅拷贝， 值可修改，但是容易引起变量污染\r\n */\n\n//# sourceURL=webpack://webpack-test/./show1.js?");
+eval("var str = '123';\nvar FIRST = 123;\n// const a1 = FIRST - str\n// console.log(\"STR:\", str - FIRST)\n\n\n//# sourceURL=webpack://webpack-test/./aaa.ts?");
 
 /***/ })
 

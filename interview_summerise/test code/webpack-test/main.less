@@ -1,0 +1,31 @@
+@size: 10px;
+@color: #006633;
+
+#aaaa {
+  font-size: @size;
+}
+body {
+
+  // 函数计算
+
+  background: spin(lighten(@color, 25%), 8);
+
+  font-weight: bold;
+
+  padding: @size;
+
+
+
+  .main {
+
+      // 运算
+
+      font-size: @size * 2;
+
+      color: darken(@color, 10%);
+
+      padding: @size * 0.6;
+
+  }
+
+}
