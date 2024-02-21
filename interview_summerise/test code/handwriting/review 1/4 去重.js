@@ -50,3 +50,14 @@ function removeRepeat4(arr) {
   })
 }
 console.log('removeRepeat4:', removeRepeat4(arr))
+
+// 和前文的循环判断一样的，只是这个是原地删除
+function removeRepeat5(arr) {
+  for(let i = arr.length; i >= 1; i--) {
+    if(arr[i] == arr[i - 1]) {
+      arr.splice(i, 1)
+    }
+  }
+  return arr
+}
+console.log('removeRepeat5:', removeRepeat4(arr))

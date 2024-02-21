@@ -4,3 +4,8 @@
 #ppp {
   background-color: rebeccapurple;
 }
+::placeholder {
+
+  color: gray;
+
+}

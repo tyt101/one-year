@@ -13,9 +13,20 @@
 /*!*****************!*\
   !*** ./show.js ***!
   \*****************/
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(content) {\r\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\r\n}\r\nconst bianliang = {\r\n  aaa: 224\r\n}\r\n// 通过 CommonJS 规范导出 show 函数\r\nmodule.exports = {\r\n  show,\r\n  bianliang,\r\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+eval("__webpack_require__(/*! ./main.less */ \"./main.less\");\n// 操作 DOM 元素，把 content 显示到网页上\nfunction show(content) {\n  window.document.getElementById('app').innerText = 'Hello11sssd11,' + content;\n}\nvar bianliang = {\n  aaa: 224\n};\n// 通过 CommonJS 规范导出 show 函数\nmodule.exports = {\n  show: show,\n  bianliang: bianliang\n};\n\n//# sourceURL=webpack://webpack-test/./show.js?");
+
+/***/ }),
+
+/***/ "./main.less":
+/*!*******************!*\
+  !*** ./main.less ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-test/./main.less?");
 
 /***/ })
 
@@ -44,6 +55,18 @@ eval("// 操作 DOM 元素，把 content 显示到网页上\r\nfunction show(con
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

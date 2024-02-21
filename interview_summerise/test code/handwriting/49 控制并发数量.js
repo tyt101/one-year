@@ -46,11 +46,10 @@ function fetch(url) {
 function ControlCount(urls, limit) {
   return new Promise((resolve, reject) => {
     if(urls.length == 0) resolve([])
-    let count = 0
-    let maxCount = 0
-    let result = []
-    let errorUrls = []
-    let errorTime = []
+    let maxCount = 0                //  当前执行了的数量
+    let result = []                 //  结果数组
+    let errorUrls = []              //  执行错误需要重传的数组
+    let errorTime = []              //  执行错误次数
     async function request() {
 
       while((urls.length || errorUrls.length)) {
@@ -60,7 +59,6 @@ function ControlCount(urls, limit) {
           try {
             const res = await fetch(url.data)
             result[url.index] = res
-            count ++
           } catch (error) {
             if(errorTime[url.index] > 1) {
               throw Error('ERRRORR')

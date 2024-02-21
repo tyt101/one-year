@@ -1,10 +1,10 @@
-const {show, bianliang} = require('./show.js');
-console.log('bianliang:',bianliang)
+// eslint-disable-next-line no-unused-vars
+const { show, bianliang } = require('./show.js')
+console.log('bianliang:', bianliang)
 
 setTimeout(() => {
-  console.log('bianlia121ng:',bianliang)
-}, 1000);
-
+  console.log('bianlia121ng:', bianliang)
+}, 1000)
 
 /**
  * Common.js 是动态的加载语句，代码发生在运行时 （同步加载）

@@ -85,20 +85,25 @@ Function.prototype.MyBind = function(content, ...args) {
   if(content == null || !content) content = window
 
   const self = this
-
-  function fn(...args1) {
-    return self.apply(this instanceof fn ? this : self, args1.concat(...args))
+  console.log("===========SELFL", self)
+  function fnn(...args1) {
+    console.log("=============:", this)
+    console.log("111",this instanceof fn, "===")
+    console.log("111222",this instanceof fnn, "===")
+    return self.apply(this instanceof fnn ? this : self, args1.concat(...args))
   }
 
   function terminalFn() {}
 
   terminalFn.prototype = this.prototype
 
-  fn.prototype = new terminalFn()
-  return fn
+  fnn.prototype = new terminalFn()
+  return fnn
 }
 
 const fn1 = fn.MyBind(null, 1, 2)
-console.log('new fn() instanceof fn1:', new fn() instanceof fn1)
-console.log('new fn() instanceof fn1:', new fn1() instanceof fn)
+// 作为普通函数调用，fn中this指向windows
+console.log('fn():', fn1())
+// 作为构造函数调用，fn中this指向fn
+console.log('new fn1() instanceof fn:', new fn1() instanceof fn)
 

@@ -11,7 +11,7 @@ class MyPromise {
       setTimeout(() => {
        this.resolveFn.forEach(fn => {
         fn.call(this, val)
-       }) 
+       })
       });
     }
 

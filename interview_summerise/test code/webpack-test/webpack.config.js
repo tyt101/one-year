@@ -1,18 +1,23 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// css-minimizer-webpack-plugin 需要和 html-webpack-plugin 混用，才能将样式link到html中
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+<<<<<<< HEAD
 const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default
+=======
+const ESlintPlugin = require('eslint-webpack-plugin')
+>>>>>>> a49911c45dd6b3389375d410439d81b05c7bb05a
 module.exports = {
   target: 'web',
   profile: true,
   entry: {
-    main: path.resolve(__dirname,'./index.js'),
-    pro: path.resolve(__dirname,'./show.js')
+    main: path.resolve(__dirname, './index.js'),
+    pro: path.resolve(__dirname, './show.js')
   },
   output: {
     filename: '[name].[contenthash:8].js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [
@@ -23,32 +28,68 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/public/path/to',
-            },
+              publicPath: '/public/path/to'
+            }
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               esModule: true,
               modules: {
                 namedExport: true,
-                localIdentName: "[local]",
-              },
-            },
+                localIdentName: '[local]'
+              }
+            }
           },
-
-          // css不抽离
-          // 'style-loader', 'css-loader'
+          'postcss-loader'
+          // {
+          // loader: 'postcss-loader',
+          //   options: {
+          //     postcssOptions: {
+          //       // 添加 autoprefixer 插件
+          //       plugins: [require('autoprefixer')]
+          //     }
+          //   }
+          // }
         ]
       },
+      {
+        test: /\.less$/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '/public/path/to'
+          }
+        }, 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.js$/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }]
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader'
+      }
     ]
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./index.html", scriptLoading: "blocking" }),
+    new HtmlWebpackPlugin({ template: './index.html', scriptLoading: 'blocking' }),
     new MiniCssExtractPlugin({
-      filename: "[name]_[contenthash:8].css",
+      filename: '[name]_[contenthash:8].css'
     }),
+<<<<<<< HEAD
     new StatoscopeWebpackPlugin()
+=======
+    new ESlintPlugin()
+>>>>>>> a49911c45dd6b3389375d410439d81b05c7bb05a
   ],
   optimization: {
     // 生产环境下
@@ -62,11 +103,11 @@ module.exports = {
   // dev-server模块， 决定浏览器是执行刷新操作 还是热更新操作
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, 'dist')
     },
     open: true,
-    port: 9000,
+    port: 9000
   },
   // watch: true,
-  mode: 'development',
-};
+  mode: 'development'
+}
